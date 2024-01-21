@@ -1,0 +1,24 @@
+{
+    "monday": [
+        {
+            "name": "Test Class",
+            "prof": "Dr. Prof. Mustermaulwurf",
+            "room": "AM 301",
+            "start": "11:00",
+            "end": "13:00",
+            "body": "This is great text with link stuff",
+            "link": ["https://www.google.com", "Such ma was"],
+            "exceptions": []
+        },
+        {
+            "name": "Test Class 2",
+            "prof": "Prof. Med. Musterspecht",
+            "room": "AM 308",
+            "start": "14:00",
+            "end": "15:30",
+            "body": "This is great text with link stuff",
+            "link": ["https://www.duckduckgo.com", "Damit hättste ned gereschnet, oder?"],
+            "exceptions": []
+        }
+    ]
+}
