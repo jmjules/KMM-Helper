@@ -1,23 +1,103 @@
 {
     "monday": [
         {
-            "name": "Test Class",
-            "prof": "Dr. Prof. Mustermaulwurf",
-            "room": "AM 301",
-            "start": "11:00",
-            "end": "13:00",
-            "body": "This is great text with link stuff",
-            "link": ["https://www.google.com", "Such ma was"],
+            "name": "Interkult. Komm. & Sprawi.",
+            "prof": "Tewes",
+            "room": "AM 126",
+            "start": "09:50",
+            "end": "11:20",
+            "body": "",
+            "link": ["https://www.google.com", "Linktext"],
             "exceptions": []
         },
         {
-            "name": "Test Class 2",
-            "prof": "Prof. Med. Musterspecht",
-            "room": "AM 308",
+            "name": "Sprachmanagement erster Termin",
+            "prof": "Gläser",
+            "room": "AM 301, später online",
+            "start": "11:30",
+            "end": "17:10",
+            "body": "Nach dem ersten mal dann online und erst ab 15:40",
+            "link": ["https://www.duckduckgo.com", "Placeholder Zoom? link"],
+            "exceptions": []
+        }
+    ],
+    "tuesday": [
+        {
+            "name": "Info-Systeme 1",
+            "prof": "Ziegler",
+            "room": "AM 307",
+            "start": "09:50",
+            "end": "17:10",
+            "body": "",
+            "link": [],
+            "exceptions": []
+        }
+    ],
+    "wednesday": [
+        {
+            "name": "Visuelle Komm.",
+            "prof": "Grunwald",
+            "room": "AM 301",
+            "start": "14:00",
+            "end": "17:10",
+            "body": "",
+            "link": [],
+            "exceptions": []
+        }
+    ],
+    "thursday": [
+        {
+            "name": "Interkult. Komm.",
+            "prof": "closs",
+            "room": "AM 301",
+            "start": "09:50",
+            "end": "13:00",
+            "body": "nur an 4.4., 18.4., 2.5., 16.05., 6.6., 20.6., 4.7.",
+            "link": [],
+            "exceptions": []
+        },
+        {
+            "name": "Sprach-Management",
+            "prof": "Drewer",
+            "room": "AM 126",
             "start": "14:00",
             "end": "15:30",
-            "body": "This is great text with link stuff",
-            "link": ["https://www.duckduckgo.com", "Damit hättste ned gereschnet, oder?"],
+            "body": "nicht an: 25.04, 16.05. <br> ersatz: Mo, 6.5., Mo 27.5. 11:30 - 13:00 <br> 2 TMS Schulungstermine: Do 25.4., Mi 8.5. 8:45 - 11:20 AM 301",
+            "link": [],
+            "exceptions": []
+        },
+        {
+            "name": "3D-Technologien",
+            "prof": "Schober",
+            "room": "AM 111",
+            "start": "15:40",
+            "end": "17:10",
+            "body": "",
+            "link": [],
+            "exceptions": []
+        }
+    ],
+    "friday": [
+        {
+            "name": "Praxisnachbereitung",
+            "prof": "Schober, Muthig, Grunwald",
+            "room": "AM 126",
+            "start": "15:40",
+            "end": "18:50",
+            "body": "Schober 22.3., Muthig 5.4., Grunwald 12.4.",
+            "link": [],
+            "exceptions": []
+        }
+    ],
+    "saturday": [
+        {
+            "name": "Technikdidaktik",
+            "prof": "NN",
+            "room": "AM 301",
+            "start": "09:50",
+            "end": "11:20",
+            "body": "",
+            "link": [],
             "exceptions": []
         }
     ]
