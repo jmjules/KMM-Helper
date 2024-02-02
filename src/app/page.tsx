@@ -5,7 +5,7 @@ import HowToNotice from "@/app/components/HowToNotice";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex-col items-center justify-between p-24">
+    <main className="min-h-screen flex-col items-center justify-between md:p-24">
       <h1 className="text-2xl">Welcome!🌻</h1>
       <nav className="text-purple-500 flex flex-col md:flex-row gap-5 mt-5">
         <Link 
