@@ -1,5 +1,5 @@
 {
-    "monday": [
+    "Montag": [
         {
             "name": "Interkult. Komm. & Sprawi.",
             "prof": "Tewes",
@@ -21,7 +21,7 @@
             "exceptions": []
         }
     ],
-    "tuesday": [
+    "Dienstag": [
         {
             "name": "Info-Systeme 1",
             "prof": "Ziegler",
@@ -33,7 +33,7 @@
             "exceptions": []
         }
     ],
-    "wednesday": [
+    "Mittwoch": [
         {
             "name": "Visuelle Komm.",
             "prof": "Grunwald",
@@ -45,7 +45,7 @@
             "exceptions": []
         }
     ],
-    "thursday": [
+    "Donnerstag": [
         {
             "name": "Interkult. Komm.",
             "prof": "closs",
@@ -77,7 +77,7 @@
             "exceptions": []
         }
     ],
-    "friday": [
+    "Freitag": [
         {
             "name": "Praxisnachbereitung",
             "prof": "Schober, Muthig, Grunwald",
@@ -89,7 +89,7 @@
             "exceptions": []
         }
     ],
-    "saturday": [
+    "Samstag": [
         {
             "name": "Technikdidaktik",
             "prof": "NN",
