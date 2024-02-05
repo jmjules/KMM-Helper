@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 
 type TimetableMenuProps = {
-    selectedDay: string;
-    setSelectedDay: React.Dispatch<React.SetStateAction<string>>;
+    selectedDay: 'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag' | 'Samstag';
+    setSelectedDay: React.Dispatch<React.SetStateAction<'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag' | 'Samstag'>>;
   };
 
 export default function TimetableMenu( {selectedDay, setSelectedDay}: TimetableMenuProps ) {
-    const test = selectedDay
+    const sD = selectedDay
     const test2 = setSelectedDay
-    const options = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
+    const options: ('Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag' | 'Samstag')[] = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
     // const [selectedOption, setSelectedOption] = useState(options[0])
 
     const handleClick = (direction : string) => {
@@ -36,7 +36,6 @@ export default function TimetableMenu( {selectedDay, setSelectedDay}: TimetableM
             <button onClick={()=> handleClick("previous")} className="border border-stone-50 rounded px-3"> {"<"} </button>
             <select 
             className="text-3xl bg-transparent border border-stone-50 rounded px-3 text-center"
-            onChange={(e) => setSelectedDay(e.target.value)} 
             value={selectedDay}
             >
                 {options.map((option) => (
