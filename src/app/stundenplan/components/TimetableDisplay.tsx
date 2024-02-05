@@ -4,20 +4,9 @@
 
 export default function TimetableDisplay( {selectedDay, data} ) {
     
-    type ClassEntry = {
-        name: string;
-        prof: string;
-        room: string;
-        start: string;
-        end: string;
-        body: string;
-        link: [string, string]; //extract into separate if there are multiple
-        exceptions: string[];
-    }
+    
 
-    type TimetableData = {
-        [day in "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" ] : ClassEntry
-    }
+   
 
 
     const test = selectedDay
