@@ -37,6 +37,7 @@ export default function TimetableMenu( {selectedDay, setSelectedDay}: TimetableM
             <select 
             className="text-3xl bg-transparent border border-stone-50 rounded px-3 text-center"
             value={selectedDay}
+            onChange={(e) => setSelectedDay(e.target.value as 'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag' | 'Samstag')}
             >
                 {options.map((option) => (
                     <option key={option} value={option} className="bg-slate-700"> {option} </option> 
