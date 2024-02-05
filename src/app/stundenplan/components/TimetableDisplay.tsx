@@ -20,7 +20,7 @@ type TimetableData = {
 };
 
 type TimetableDisplayProps = {
-  selectedDay: keyof TimetableData;
+  selectedDay: keyof TimetableData | string;
   data: TimetableData;
 };
 
