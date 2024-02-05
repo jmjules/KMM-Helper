@@ -2,16 +2,37 @@
 // import { useState } from "react";
 
 
-export default function TimetableDisplay( {selectedDay, data} ) {
+type ClassEntry = {
+  name: string;
+  prof: string;
+  room: string;
+  start: string;
+  end: string;
+  body: string;
+  link: [string, string];
+  exceptions: string[];
+};
+
+type TimetableData = {
+  [day in "Montag" | "Dienstag" | "Mittwoch" | "Donnerstag" | "Freitag" | "Samstag"]: {
+    [classKey: string]: ClassEntry;
+  };
+};
+
+type TimetableDisplayProps = {
+  selectedDay: keyof TimetableData;
+  data: TimetableData;
+};
+
+
+
+
+export default function TimetableDisplay( {selectedDay, data}: TimetableDisplayProps ) {
     
     
 
    
-
-
-    const test = selectedDay
-
-    const dayReference = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
+    const dayReference: string[] = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
 
 
 

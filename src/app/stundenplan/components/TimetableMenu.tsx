@@ -1,30 +1,35 @@
+import PropTypes from "prop-types";
+
+type TimetableMenuProps = {
+    selectedDay: string;
+    setSelectedDay: React.Dispatch<React.SetStateAction<string>>;
+  };
+
+export default function TimetableMenu( {selectedDay, setSelectedDay}: TimetableMenuProps ) {
+    const test = selectedDay
+    const test2 = setSelectedDay
+    const options = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
+    // const [selectedOption, setSelectedOption] = useState(options[0])
+
+    const handleClick = (direction : string) => {
+        const currentIndex = options.indexOf(selectedDay);
 
 
-    export default function TimetableMenu( {selectedDay, setSelectedDay} ) {
-        const test = selectedDay
-        const test2 = setSelectedDay
-        const options = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
-        // const [selectedOption, setSelectedOption] = useState(options[0])
-
-        const handleClick = (direction : string) => {
-            const currentIndex = options.indexOf(selectedDay);
-
-
-            // setSelectedDay(options[currentIndex + 1]);
-            if (direction === 'next' && currentIndex === options.length - 1) {
-                setSelectedDay(options[0])
-            }
-            else if (direction === 'previous' && currentIndex === 0) {
-                setSelectedDay(options[options.length - 1])
-            }
-            else if (direction === 'next') {
-                setSelectedDay(options[currentIndex + 1]);
-              } 
-            else if (direction === 'previous') {
-                setSelectedDay(options[currentIndex - 1]);
-              }
-
+        // setSelectedDay(options[currentIndex + 1]);
+        if (direction === 'next' && currentIndex === options.length - 1) {
+            setSelectedDay(options[0])
         }
+        else if (direction === 'previous' && currentIndex === 0) {
+            setSelectedDay(options[options.length - 1])
+        }
+        else if (direction === 'next') {
+            setSelectedDay(options[currentIndex + 1]);
+            } 
+        else if (direction === 'previous') {
+            setSelectedDay(options[currentIndex - 1]);
+            }
+
+    }
 
     return (
         <div className="fixed bottom-10 left-2/4 -translate-x-1/2 flex gap-2">

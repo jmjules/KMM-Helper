@@ -20,11 +20,13 @@ type ClassEntry = {
 }
 
 type TimetableData = {
-    [day in "Montag" | "Dienstag" | "Mittwoch" | "Donnerstag" | "Freitag" | "Samstag" ] : ClassEntry
-}
+    [day in "Montag" | "Dienstag" | "Mittwoch" | "Donnerstag" | "Freitag" | "Samstag"]: {
+      [classKey: string]: ClassEntry;
+    };
+  };
 
 type TimetableProps = {
-    timeTableData: TimetableData[];
+    timeTableData: TimetableData;
   };
 
 
