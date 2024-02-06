@@ -37,6 +37,7 @@ export default function Timetable ( {timeTableData}: TimetableProps ) {
 
   const [selectedDay, setSelectedDay] = useState<'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag' | 'Samstag'>(days[0]);
 
+  const [hasRendered, setHasRendered] = useState(false)
 
 
   useEffect(() => {
@@ -47,12 +48,14 @@ export default function Timetable ( {timeTableData}: TimetableProps ) {
       setSelectedDay(days[currentDayIndex-1]);
     }
 
+    setHasRendered(true)
+
   }, []);
 
 
   return (
     <>
-        <TimetableDisplay selectedDay={selectedDay} data={timeTableData} />
+        {hasRendered ? <TimetableDisplay selectedDay={selectedDay} data={timeTableData} /> : null}
         <TimetableMenu selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
     </>
   );
