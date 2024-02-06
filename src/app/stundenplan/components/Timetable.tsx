@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
@@ -32,26 +32,28 @@ type TimetableProps = {
 
 export default function Timetable ( {timeTableData}: TimetableProps ) {
 
-    const days: ('Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag' | 'Samstag')[] = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
+  const days: ('Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag' | 'Samstag')[] = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
 
 
-    const [selectedDay, setSelectedDay] = useState<'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag' | 'Samstag'>(days[0]);
-
-
-
+  const [selectedDay, setSelectedDay] = useState<'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag' | 'Samstag'>(days[0]);
 
 
 
-    return (
-        <>
-            
-            <TimetableDisplay selectedDay={selectedDay} data={timeTableData} />
+  useEffect(() => {
+    const currentDate = new Date;
+    const currentDayIndex = currentDate.getDay();
 
-            <TimetableMenu selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
+    if (currentDayIndex !==  0) {
+      setSelectedDay(days[currentDayIndex-1]);
+    }
 
-        </>
+  }, []);
 
 
-
-    );
+  return (
+    <>
+        <TimetableDisplay selectedDay={selectedDay} data={timeTableData} />
+        <TimetableMenu selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
+    </>
+  );
 }
