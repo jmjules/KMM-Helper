@@ -3,6 +3,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## TODO
 
 - Automatically selecting current date on load
+- Better mobile UI
+    - changing spacing
+    - class cards can be expanded on click
+    - maybe also add touch swipe interaction with hammer js
 - Notice for exceptions/irregularities in the next 6 days
 - PWAifying aka creating a manifest
     - making App work offline  
