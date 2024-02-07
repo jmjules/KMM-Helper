@@ -19,6 +19,9 @@
 # misc
 .DS_Store
 *.pem
+sw.*
+workbox-*
+swe-worker-*
 
 # debug
 npm-debug.log*
