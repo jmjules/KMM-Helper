@@ -32,7 +32,7 @@ export default function TimetableMenu( {selectedDay, setSelectedDay}: TimetableM
     }
 
     return (
-        <div className="fixed bottom-10 left-2/4 -translate-x-1/2 flex gap-2">
+        <div className="fixed bottom-16 left-2/4 -translate-x-1/2 flex gap-2">
             <button onClick={()=> handleClick("previous")} className="border border-stone-50 rounded px-3"> {"<"} </button>
             <select 
             className="text-3xl bg-transparent border border-stone-50 rounded px-3 text-center"

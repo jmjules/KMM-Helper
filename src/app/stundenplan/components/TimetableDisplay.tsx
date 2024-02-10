@@ -36,17 +36,25 @@ export default function TimetableDisplay({ selectedDay, data }: TimetableDisplay
       <>
         {Object.keys(data[selectedDay]).map((classKey) => {
           const classData = data[selectedDay][classKey];
+
+          const bodyArr = classData.body.split("<br>")
+          
           // Now TypeScript knows that classData is a valid ClassEntry
           return (
-            <div key={classKey} className="bg-purple-800 rounded-lg m-2 p-1 flex gap-2">
+            <div key={classKey} className="bg-purple-800 rounded-lg m-2 p-1 flex gap-4">
               <p className="text-sm text-center leading-none self-center">
-                {classData.start} <br /> I <br /> {classData.end}
+                {classData.start} <br />
+                     I <br /> 
+                {classData.end}
               </p>
               <div>
                 <p className="text-2xl font-bold">{classData.name}</p>
-                <p className="text-sm">{classData.room}</p>
-                <p className="text-sm">{classData.prof}</p>
-                <p className="text-sm">{classData.body}</p>
+                <p className="text-xs mb-2">{classData.room} - {classData.prof}</p>
+              
+                {bodyArr.map(paragraph => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+                
                 <a href={classData.link[0]} target="_blank" className="text-green-500">
                   {classData.link[1]}
                 </a>

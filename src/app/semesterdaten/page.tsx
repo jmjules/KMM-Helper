@@ -9,26 +9,27 @@ export default async function SemesterData () {
   const semester = data.rahmendaten;
 
   return (
-    <main className="min-h-screen flex-col items-center justify-between md:p-24">
-      {/* würde das vllt weiter oben in ne kleinere Hero section packen */}
-      <div className="h-24 bg-orange-700 p-3 flex flex-row gap-2 place-items-center">
-        <Link href="/">
-        <img src="favicon.ico" className="w-7 h-7" />
+    <main className="min-h-screen flex-col items-center justify-between">
+      <div className="h-32 bg-orange-700 mb-7 p-3 pt-7">
+        <Link href="/" className="text-4xl font-extrabold rounded border">
+          KMM-Hub
+        {/* <img src="favicon.ico" className="w-10 h-10" /> */}
         </Link>
-      <h1 className='text-lg'> {">"} Semestertermine</h1> 
+        <h1 className='text-2xl md:text-4xl font-bold ml-3'> {">"} Semestertermine</h1> 
       </div>
       
-      <div className="p-6">
-        <h2> {data.title} </h2>
+
+
+      <div className="p-6 bg-orange-700 m-2 rounded-lg">
+        <h2 className="text-2xl font-bold"> {data.title} </h2>
         <p className="text-xs"> {semester.start} - {semester.end} </p>
-        <br />
-        <h2>Vorlesungszeit</h2>
+        <h2 className="text-xl mt-3">Vorlesungszeit</h2>
         <p className="text-xs"> {semester.startOfClasses} - {semester.endOfClasses} </p>
         
-        <h2>Prüfungszeit</h2>
+        <h2 className="text-xl mt-2">Prüfungszeit</h2>
         <p className="text-xs"> {semester.startOfExams} - {semester.endOfExams} </p>
         
-        <h2>Vorlesungsfreie Tage</h2>
+        <h2 className="text-xl mt-2">Vorlesungsfreie Tage</h2>
         <p className="text-xs"> {semester.vacationDays[0].date} ({semester.vacationDays[0].reason}) </p>
         <p className="text-xs"> {semester.vacationDays[1].date} - {semester.vacationDays[4].date} ({semester.vacationDays[1].reason}) </p>
       </div>
