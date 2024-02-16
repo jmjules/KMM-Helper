@@ -4,13 +4,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - ~~[x] Automatically selecting current date on load~~
 - [ ] Better mobile UI
-    - [ ] changing spacing
-    - [ ] class cards can be expanded on click
+    - [x] changing spacing
     - [ ] maybe also add touch swipe interaction with hammer js
-- ~~[x] PWAifying aka creating a manifest~~
+- [ ] making App work offline
     - ~~[x] adding a manifest~~
-    - ~~[x] making App work offline~~
+    - ~~[x] PWAifying aka creating a manifest~~
     - ~~[x] refreshes when back online~~ 
+    - [ ] Check why stuff sometimes isn't cached on
 - [ ] Notice for exceptions/irregularities in the next 6 days
-- [ ] Hide or mark otherwise when a certain class is not held that week
+    - [ ] Hide or mark otherwise when a certain class is not held that week
 - [ ] Desktop UI
