@@ -1,5 +1,7 @@
 'use client'
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+// import Hammer from "hammerjs";
+
 
 
 
@@ -49,14 +51,41 @@ export default function Timetable ( {timeTableData}: TimetableProps ) {
     }
 
     setHasRendered(true)
-
   }, []);
 
 
+//swipe support
+  const [startX, setStartX] = useState(null);
+
+  const handleTouchStart = (event) => {
+    setStartX(event.touches[0].clientX);
+    console.log("touch started");
+    
+  };
+
+  const handleTouchEnd = (event) => {
+    const endX = event.changedTouches[0].clientX;
+    const deltaX = endX - startX;
+
+    const selectedIndex = days.indexOf(selectedDay);
+    
+    if (deltaX > 50 && selectedIndex > 0) {
+      setSelectedDay(days[selectedIndex-1]); // Swipe right, go to previous day
+    } else if (deltaX < -50 && selectedIndex < days.length - 1) {
+      setSelectedDay(days[selectedIndex+1]); // Swipe left, go to next day
+    }
+  };
+
+
   return (
-    <>
+    <div className="">
         {hasRendered ? <TimetableDisplay selectedDay={selectedDay} data={timeTableData} /> : null}
         <TimetableMenu selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
-    </>
+        <div 
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          className="absolute top-0 bottom-0 left-0 right-0 -z-10 bg-transparent">
+        </div>
+    </div>
   );
 }
