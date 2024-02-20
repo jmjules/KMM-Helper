@@ -40,7 +40,7 @@ export default function TimetableMenu( {selectedDay, setSelectedDay}: TimetableM
             onChange={(e) => setSelectedDay(e.target.value as 'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag' | 'Samstag')}
             >
                 {options.map((option) => (
-                    <option key={option} value={option} className="bg-zinc-700 text-center inline-block"> {option} </option> 
+                    <option key={option} value={option} className="bg-zinc-700"> {option} </option> 
                 ))}
             </select>
             <button onClick={()=> handleClick("next")} className="bg-zinc-900 border border-stone-50 rounded px-3"> {">"} </button>
