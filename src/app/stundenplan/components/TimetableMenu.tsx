@@ -33,17 +33,17 @@ export default function TimetableMenu( {selectedDay, setSelectedDay}: TimetableM
 
     return (
         <div className="fixed bottom-16 left-2/4 -translate-x-1/2 flex gap-2">
-            <button onClick={()=> handleClick("previous")} className="border border-stone-50 rounded px-3"> {"<"} </button>
+            <button onClick={()=> handleClick("previous")} className="bg-zinc-900 border border-stone-50 rounded px-3"> {"<"} </button>
             <select 
-            className="text-3xl bg-transparent border border-stone-50 rounded px-3 text-center"
+            className="text-3xl bg-zinc-900 border border-stone-50 rounded px-3 text-center"
             value={selectedDay}
             onChange={(e) => setSelectedDay(e.target.value as 'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag' | 'Samstag')}
             >
                 {options.map((option) => (
-                    <option key={option} value={option} className="bg-slate-700"> {option} </option> 
+                    <option key={option} value={option} className="bg-zinc-700 text-center inline-block"> {option} </option> 
                 ))}
             </select>
-            <button onClick={()=> handleClick("next")} className="border border-stone-50 rounded px-3"> {">"} </button>
+            <button onClick={()=> handleClick("next")} className="bg-zinc-900 border border-stone-50 rounded px-3"> {">"} </button>
         </div>
     )
 }

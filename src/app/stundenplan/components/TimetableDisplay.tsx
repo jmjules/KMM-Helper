@@ -30,10 +30,47 @@ type TimetableDisplayProps = {
 export default function TimetableDisplay({ selectedDay, data }: TimetableDisplayProps) {
   const dayReference: string[] = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
 
+
+
+  const dayExceptionsArray: string[][] = data[(selectedDay)].map((classObj: ClassEntry) => {
+    return classObj.exceptions.length > 0 ? [classObj.name , classObj.exceptions] : null;
+  })
+
+  // Filter out null values from dayExceptionsArray
+  const filteredExceptions: string[][] = dayExceptionsArray.filter(exceptions => exceptions !== null);
+  console.log(filteredExceptions);
+  
+  
+
   // Type guard to check if selectedDay is a valid key
   if (dayReference.includes(selectedDay as string)) {
     return (
-      <>
+      <div className="mt-3 pb-32">
+        <h2 className="text-4xl font-bold text-center">{selectedDay}</h2>
+        {
+          filteredExceptions.length > 0 &&
+          (<div className="bg-red-700 rounded-lg m-2 p-2">
+            <h3 className="text-2xl font-bold">⚠ Ausnahmen</h3>
+            {filteredExceptions.map(arr => (
+              <>
+                <p>{arr[0]}</p>
+                  <ul>
+                    { arr[1].map((dateString) => (
+                      <>
+                        {
+                          compareToToday(dateString) >= 0 && compareToToday(dateString) < 70 
+                            &&
+                          <li className="list-inside list-disc"> {new Date(dateString).toLocaleDateString("de-DE")} in {compareToToday(dateString)} Tagen </li>
+                        }
+                      </>
+                    )) }
+
+                  </ul>
+              </>
+            ))}
+          </div>)
+        }
+
         {Object.keys(data[selectedDay]).map((classKey) => {
           const classData = data[selectedDay][classKey];
 
@@ -52,7 +89,7 @@ export default function TimetableDisplay({ selectedDay, data }: TimetableDisplay
                 <p className="text-xs mb-2">{classData.room} - {classData.prof}</p>
               
                 {bodyArr.map(paragraph => (
-                  <p key={paragraph}>{paragraph}</p>
+                  <p key={paragraph} className="py-1">{paragraph}</p>
                 ))}
                 
                 <a href={classData.link[0]} target="_blank" className="text-green-500">
@@ -62,9 +99,22 @@ export default function TimetableDisplay({ selectedDay, data }: TimetableDisplay
             </div>
           );
         })}
-      </>
+      </div>
     );
   } else {
     return null; // Handle the case where selectedDay is not a valid key
   }
+}
+
+
+//helper from here on
+function compareToToday(dayString : string) : number {
+  const today = new Date()
+  const dateToCompare = new Date(dayString)
+
+  const differenceMs = dateToCompare.getTime() - today.getTime();
+  // Convert milliseconds to days
+  const differenceDays = Math.ceil(differenceMs / (1000 * 60 * 60 * 24));
+
+  return differenceDays
 }

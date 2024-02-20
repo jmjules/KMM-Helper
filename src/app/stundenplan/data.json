@@ -18,7 +18,7 @@
             "end": "17:10",
             "body": "Nach dem ersten mal dann online und erst ab 15:40",
             "link": ["https://www.duckduckgo.com", "Placeholder Zoom? link"],
-            "exceptions": []
+            "exceptions": ["2024-03-18"]
         }
     ],
     "Dienstag": [
@@ -54,7 +54,7 @@
             "end": "13:00",
             "body": "nur an 4.4., 18.4., 2.5., 16.05., 6.6., 20.6., 4.7.",
             "link": [],
-            "exceptions": []
+            "exceptions": ["2024-04-04", "2024-04-18", "2024-05-02", "2024-05-16", "2024-06-06", "2024-06-20", "2024-07-04"]
         },
         {
             "name": "Sprach-Management",
@@ -62,9 +62,9 @@
             "room": "AM 126",
             "start": "14:00",
             "end": "15:30",
-            "body": "nicht an: 25.04, 16.05. <br> ersatz: Mo, 6.5., Mo 27.5. 11:30 - 13:00 <br> 2 TMS Schulungstermine: Do 25.4., Mi 8.5. 8:45 - 11:20 AM 301",
+            "body": "nicht an: 25.04 (aber Schulung), 16.05. <br> ersatz: Mo, 6.5., Mo 27.5. 11:30 - 13:00 <br> 2 TMS Schulungstermine: Do 25.4., Mi 8.5. 8:45 - 11:20 AM 301",
             "link": [],
-            "exceptions": []
+            "exceptions": ["2024-04-25", "2024-05-06", "2024-05-08", "2024-05-16", "2024-05-27"]
         },
         {
             "name": "3D-Technologien",
@@ -86,7 +86,7 @@
             "end": "18:50",
             "body": "Schober 22.3., Muthig 5.4., Grunwald 12.4.",
             "link": [],
-            "exceptions": []
+            "exceptions": ["2024-03-22", "2024-04-05", "2024-04-12"]
         }
     ],
     "Samstag": [
