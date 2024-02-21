@@ -2,6 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## TODO
 
+- [ ] Changle json type -> let weekday name be a property so all days can just be items of an array
 - ~~[x] Automatically selecting current date on load~~
 - [ ] Better mobile UI
     - [x] changing spacing
@@ -11,6 +12,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
     - ~~[x] PWAifying aka creating a manifest~~
     - ~~[x] refreshes when back online~~ 
     - [ ] Check why stuff sometimes isn't cached on
-- [ ] Notice for exceptions/irregularities in the next 6 days
-    - [ ] Hide or mark otherwise when a certain class is not held that week
+- ~~[x] Notice for exceptions/irregularities in the next 70 days~~
+    - ~~[ ] Hide or mark otherwise when a certain class is not held that week~~
 - [ ] Desktop UI
