@@ -11,34 +11,28 @@ export default function Home() {
       </div>
 
       <h2 className="text-2xl m-2">Welcome!🌻</h2>
-      <nav className="text-purple-500 flex flex-col md:flex-row gap-5 mt-5 p-2">
+
+      <HowToNotice />
+
+      <nav className="flex flex-col md:flex-row gap-5 mt-5 p-2">
         <Link 
          href="/stundenplan" 
-         className="text-xl rounded-lg bg-slate-800 p-5 pb-7">
-          <Image 
-            src="/images/unsplash-calendar.jpg"
-            width={350}
-            height={300}
-            alt="Image of calendar"
-          />
-          Hier gehts zum Stundenplan
+         className="text-xl rounded-lg bg-slate-800 px-5 py-7 flex gap-5 items-center"
+        >
+          <img src="/icons/icon-timetable.svg" className="w-9" />
+          Stundenplan
         </Link>
 
         
         <Link 
          href="/semesterdaten" 
-         className="text-xl rounded-lg bg-slate-800 p-5 pb-7">
-          <Image 
-            src="/images/unsplash-clock.jpg"
-            width={350}
-            height={300}
-            alt="Image of calendar"
-          />
+         className="text-xl rounded-lg bg-slate-800 px-5 py-7 flex gap-5 items-center"
+        >
+          <img src="/icons/icon-calendar.svg" className="w-9" />
           Semesterdaten
         </Link>
       </nav>
 
-      <HowToNotice />
 
     </main>
   );

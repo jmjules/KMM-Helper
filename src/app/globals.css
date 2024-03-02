@@ -2,10 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* 
+If I wanna have a light theme
+  :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+} */
+
+
+/* dark theme all the time */
+:root {
+  --foreground-rgb: 200, 200, 200;
+  --background-start-rgb: 33, 33, 33;
+  --background-end-rgb: 24, 16, 16;
 }
 
 @media (prefers-color-scheme: dark) {

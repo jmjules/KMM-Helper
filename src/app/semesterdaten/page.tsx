@@ -1,5 +1,6 @@
 import { promises as fs } from "fs";
 import Link from "next/link";
+import SubPageHeader from "../components/SubPageHeader";
 
 
 export default async function SemesterData () {
@@ -10,13 +11,7 @@ export default async function SemesterData () {
 
   return (
     <main className="min-h-screen flex-col items-center justify-between">
-      <div className="h-32 bg-orange-700 mb-7 p-3 pt-7">
-        <Link href="/" className="text-4xl font-extrabold rounded border">
-          KMM-Hub
-        {/* <img src="favicon.ico" className="w-10 h-10" /> */}
-        </Link>
-        <h1 className='text-2xl md:text-4xl font-bold ml-3'> {">"} Semestertermine</h1> 
-      </div>
+      <SubPageHeader pageTitle="Semesterdaten" colorString="bg-orange-700" />
       
 
 
