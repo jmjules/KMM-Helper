@@ -25,17 +25,17 @@ export default function HowToNotice() {
     return null;
   }
   return (
-    <>
-        <h2 className="mt-16 text-xl">How to use:</h2>
+    <div className="p-5 bg-green-900 rounded-lg">
+        <h2 className="text-2xl">Tipp:</h2>
         <p>
           Einfach am handy als Lesezeichen abspeichern, sodass man damit über den
           Home-screen mit einem App-Icon darauf zugreifen kann.
         </p>
         <button 
-         className='bg-green-700 px-4 py-2 rounded-lg'
+         className='bg-green-700 mt-2 px-4 py-2 rounded-lg'
          onClick={savetNoticeAcknowledged}
          >Okay
         </button>
-    </>
+    </div>
   )
 }

@@ -62,7 +62,7 @@
             "room": "AM 126",
             "start": "14:00",
             "end": "15:30",
-            "body": "nicht an: 25.04 (aber Schulung), 16.05. <br> ersatz: Mo, 6.5., Mo 27.5. 11:30 - 13:00 <br> 2 TMS Schulungstermine: Do 25.4., Mi 8.5. 8:45 - 11:20 AM 301",
+            "body": "Nicht an: <br> 25.04 (aber Schulung), 16.05. <br> Ersatz: <br> Mo, 6.5., Mo 27.5. 11:30 - 13:00 AM 301 <br> 2 TMS Schulungstermine: <br> Do 25.4. 8:45 - 12:15, Mi 8.5. 8:45 - 11:20 AM 301",
             "link": [],
             "exceptions": ["2024-04-25", "2024-05-06", "2024-05-08", "2024-05-16", "2024-05-27"]
         },
@@ -79,6 +79,16 @@
     ],
     "Freitag": [
         {
+            "name": "Technikdidaktik",
+            "prof": "Pittschellis",
+            "room": "AM 308",
+            "start": "09:50",
+            "end": "15:30",
+            "body": "Nur an: <br> 05.04., 12.04., 19.04., 17.05., 14.06., 21.06., 28.06",
+            "link": [],
+            "exceptions": ["2024-04-05", "2024-04-12", "2024-04-19", "2024-05-17", "2024-06-14", "2024-06-21", "2024-06-28"]
+        },
+        {
             "name": "Praxisnachbereitung",
             "prof": "Schober, Muthig, Grunwald",
             "room": "AM 126",
@@ -90,15 +100,6 @@
         }
     ],
     "Samstag": [
-        {
-            "name": "Technikdidaktik",
-            "prof": "NN",
-            "room": "AM 301",
-            "start": "09:50",
-            "end": "11:20",
-            "body": "",
-            "link": [],
-            "exceptions": []
-        }
+        
     ]
 }

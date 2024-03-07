@@ -89,7 +89,7 @@ export default function TimetableDisplay({ selectedDay, data }: TimetableDisplay
                 <p className="text-xs mb-2">{classData.room} - {classData.prof}</p>
               
                 {bodyArr.map(paragraph => (
-                  <p key={paragraph} className="py-1">{paragraph}</p>
+                  <p key={paragraph} className="p-0">{paragraph}</p>
                 ))}
                 
                 <a href={classData.link[0]} target="_blank" className="text-green-500">
