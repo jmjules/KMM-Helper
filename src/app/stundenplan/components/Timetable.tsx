@@ -46,7 +46,7 @@ export default function Timetable ( {timeTableData}: TimetableProps ) {
     const currentDate = new Date;
     const currentDayIndex = currentDate.getDay();
 
-    if (currentDayIndex !==  0) {
+    if (currentDayIndex > 0 && currentDayIndex < 6) {
       setSelectedDay(days[currentDayIndex-1]);
     }
 
@@ -78,14 +78,16 @@ export default function Timetable ( {timeTableData}: TimetableProps ) {
 
 
   return (
-    <div className="">
-        {hasRendered ? <TimetableDisplay selectedDay={selectedDay} data={timeTableData} /> : null}
-        <TimetableMenu selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
-        <div 
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-          className="absolute top-0 bottom-0 left-0 right-0 -z-10 bg-transparent">
-        </div>
-    </div>
+    <>
+      {hasRendered ? 
+        <TimetableDisplay selectedDay={selectedDay} data={timeTableData} /> : null
+      }
+      <TimetableMenu selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
+      <div 
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        className="absolute top-0 bottom-0 left-0 right-0 -z-10 bg-transparent">
+      </div>
+    </>
   );
 }
