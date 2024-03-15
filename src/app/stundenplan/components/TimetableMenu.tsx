@@ -33,7 +33,7 @@ export default function TimetableMenu( {selectedDay, setSelectedDay}: TimetableM
 
     return (
         <div className="fixed bottom-16 left-2/4 -translate-x-1/2 flex gap-2">
-            <button onClick={()=> handleClick("previous")} className="bg-zinc-900 border border-stone-50 rounded px-3"> {"<"} </button>
+            <button onClick={()=> handleClick("previous")} className="bg-zinc-900 border border-stone-50 rounded px-4"> {"<"} </button>
             <select 
             className="text-3xl bg-zinc-900 border border-stone-50 rounded px-3 text-center"
             value={selectedDay}
@@ -43,7 +43,7 @@ export default function TimetableMenu( {selectedDay, setSelectedDay}: TimetableM
                     <option key={option} value={option} className="bg-zinc-700"> {option} </option> 
                 ))}
             </select>
-            <button onClick={()=> handleClick("next")} className="bg-zinc-900 border border-stone-50 rounded px-3"> {">"} </button>
+            <button onClick={()=> handleClick("next")} className="bg-zinc-900 border border-stone-50 rounded px-4"> {">"} </button>
         </div>
     )
 }
