@@ -53,7 +53,7 @@ export default function TimetableDisplay({ selectedDay, data }: TimetableDisplay
             <h3 className="text-2xl font-bold">⚠ Ausnahmen</h3>
             {filteredExceptions.map(arr => (
               <>
-                <p>{arr[0]}</p>
+                <p className="font-bold">{arr[0]}</p>
                   <ul>
                     { arr[1].map((dateString) => (
                       <>
