@@ -22,7 +22,7 @@ type ClassEntry = {
 }
 
 type TimetableData = {
-    [day in "Montag" | "Dienstag" | "Mittwoch" | "Donnerstag" | "Freitag" | "Samstag"]: {
+    [day in "Montag" | "Dienstag" | "Mittwoch" | "Donnerstag" | "Freitag"]: {
       [classKey: string]: ClassEntry;
     };
   };
@@ -34,10 +34,10 @@ type TimetableProps = {
 
 export default function Timetable ( {timeTableData}: TimetableProps ) {
 
-  const days: ('Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag' | 'Samstag')[] = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
+  const days: ('Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag')[] = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"]
 
 
-  const [selectedDay, setSelectedDay] = useState<'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag' | 'Samstag'>(days[0]);
+  const [selectedDay, setSelectedDay] = useState<'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag'>(days[0]);
 
   const [hasRendered, setHasRendered] = useState(false)
 

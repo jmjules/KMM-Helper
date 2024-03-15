@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 
 type TimetableMenuProps = {
-    selectedDay: 'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag' | 'Samstag';
-    setSelectedDay: React.Dispatch<React.SetStateAction<'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag' | 'Samstag'>>;
+    selectedDay: 'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag';
+    setSelectedDay: React.Dispatch<React.SetStateAction<'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag'>>;
   };
 
 export default function TimetableMenu( {selectedDay, setSelectedDay}: TimetableMenuProps ) {
     const sD = selectedDay
     const test2 = setSelectedDay
-    const options: ('Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag' | 'Samstag')[] = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
+    const options: ('Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag')[] = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"]
     // const [selectedOption, setSelectedOption] = useState(options[0])
 
     const handleClick = (direction : string) => {
@@ -37,7 +37,7 @@ export default function TimetableMenu( {selectedDay, setSelectedDay}: TimetableM
             <select 
             className="text-3xl bg-zinc-900 border border-stone-50 rounded px-3 text-center"
             value={selectedDay}
-            onChange={(e) => setSelectedDay(e.target.value as 'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag' | 'Samstag')}
+            onChange={(e) => setSelectedDay(e.target.value as 'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag')}
             >
                 {options.map((option) => (
                     <option key={option} value={option} className="bg-zinc-700"> {option} </option> 

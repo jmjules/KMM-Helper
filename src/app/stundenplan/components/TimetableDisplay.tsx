@@ -14,7 +14,7 @@ type ClassEntry = {
 };
 
 type TimetableData = {
-  [day in "Montag" | "Dienstag" | "Mittwoch" | "Donnerstag" | "Freitag" | "Samstag"]: {
+  [day in "Montag" | "Dienstag" | "Mittwoch" | "Donnerstag" | "Freitag" ]: {
     [classKey: string]: ClassEntry;
   };
 };
@@ -28,7 +28,7 @@ type TimetableDisplayProps = {
 
 
 export default function TimetableDisplay({ selectedDay, data }: TimetableDisplayProps) {
-  const dayReference: string[] = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
+  const dayReference: string[] = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"];
 
 
 
@@ -58,9 +58,9 @@ export default function TimetableDisplay({ selectedDay, data }: TimetableDisplay
                     { arr[1].map((dateString) => (
                       <>
                         {
-                          compareToToday(dateString) >= 0 && compareToToday(dateString) < 70 
+                          compareToToday(dateString) >= 0 && compareToToday(dateString) < 31 
                             &&
-                          <li className="list-inside list-disc"> {new Date(dateString).toLocaleDateString("de-DE")} in {compareToToday(dateString)} Tagen </li>
+                          <li className="list-inside list-disc"> {createWarningText(dateString)} </li>
                         }
                       </>
                     )) }
@@ -117,4 +117,21 @@ function compareToToday(dayString : string) : number {
   const differenceDays = Math.ceil(differenceMs / (1000 * 60 * 60 * 24));
 
   return differenceDays
+}
+
+
+
+function createWarningText(dayString : string) : string {
+	const dayDiff : number = compareToToday(dayString)
+	const formattedDate : string = new Date(dayString).toLocaleDateString("de-DE")
+
+	if (dayDiff === 0) {
+		return "Heute"
+	} 
+	else if (dayDiff === 1) {
+		return `Morgen am ${formattedDate}`
+	}
+	else {
+		return `In ${dayDiff} Tagen am ${formattedDate}`
+	}
 }
