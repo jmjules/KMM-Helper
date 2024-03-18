@@ -11,14 +11,14 @@
             "exceptions": []
         },
         {
-            "name": "Sprachmanagement erster Termin",
+            "name": "Sprachmanagement",
             "prof": "Gläser",
-            "room": "AM 301, später online",
-            "start": "11:30",
+            "room": "online",
+            "start": "15:40",
             "end": "17:10",
-            "body": "Nach dem ersten mal dann online und erst ab 15:40",
-            "link": ["https://www.duckduckgo.com", "Placeholder Zoom? link"],
-            "exceptions": ["2024-03-18"]
+            "body": "",
+            "link": ["https://www.duckduckgo.com", "Zoom Link soon™"],
+            "exceptions": []
         }
     ],
     "Dienstag": [
@@ -52,7 +52,7 @@
             "room": "AM 301",
             "start": "09:50",
             "end": "13:00",
-            "body": "nur an 4.4., 18.4., 2.5., 16.05., 6.6., 20.6., 4.7.",
+            "body": "Nur an: <br> 4.4., 18.4., 2.5., 16.05., 6.6., 20.6., 4.7.",
             "link": [],
             "exceptions": ["2024-04-04", "2024-04-18", "2024-05-02", "2024-05-16", "2024-06-06", "2024-06-20", "2024-07-04"]
         },

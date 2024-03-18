@@ -58,12 +58,14 @@ export default function Timetable ( {timeTableData}: TimetableProps ) {
   const [startX, setStartX] = useState(null);
 
   const handleTouchStart = (event) => {
-    setStartX(event.touches[0].clientX);
+    // setStartX(event.touches[0].clientX);
     console.log("touch started");
     
   };
 
   const handleTouchEnd = (event) => {
+    console.log("handle end or cancel");
+    
     const endX = event.changedTouches[0].clientX;
     const deltaX = endX - startX;
 
@@ -83,11 +85,14 @@ export default function Timetable ( {timeTableData}: TimetableProps ) {
         <TimetableDisplay selectedDay={selectedDay} data={timeTableData} /> : null
       }
       <TimetableMenu selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
-      <div 
+      {/* <div 
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
-        className="absolute top-0 bottom-0 left-0 right-0 -z-10 bg-transparent">
-      </div>
+        onTouchCancel={handleTouchEnd}
+        // onPointerDown={e => console.log("down")}
+        // onPointerMove={e => console.log("move")}
+        className="absolute top-0 bottom-0 left-0 right-0 z-1??? bg-green-500">
+      </div> */}
     </>
   );
 }

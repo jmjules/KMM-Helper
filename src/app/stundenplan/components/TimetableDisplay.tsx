@@ -76,7 +76,6 @@ export default function TimetableDisplay({ selectedDay, data }: TimetableDisplay
 
           const bodyArr = classData.body.split("<br>")
           
-          // Now TypeScript knows that classData is a valid ClassEntry
           return (
             <div key={classKey} className="bg-purple-800 rounded-lg m-2 p-1 flex gap-4">
               <p className="text-sm text-center leading-none self-center">
