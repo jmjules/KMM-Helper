@@ -58,7 +58,7 @@ export default function Timetable ( {timeTableData}: TimetableProps ) {
   const [startX, setStartX] = useState(null);
 
   const handleTouchStart = (event) => {
-    // setStartX(event.touches[0].clientX);
+    setStartX(event.touches[0].clientX);
     console.log("touch started");
     
   };
@@ -73,8 +73,12 @@ export default function Timetable ( {timeTableData}: TimetableProps ) {
     
     if (deltaX > 50 && selectedIndex > 0) {
       setSelectedDay(days[selectedIndex-1]); // Swipe right, go to previous day
+      console.log("right");
+      
     } else if (deltaX < -50 && selectedIndex < days.length - 1) {
       setSelectedDay(days[selectedIndex+1]); // Swipe left, go to next day
+      console.log("left");
+      
     }
   };
 
@@ -85,14 +89,14 @@ export default function Timetable ( {timeTableData}: TimetableProps ) {
         <TimetableDisplay selectedDay={selectedDay} data={timeTableData} /> : null
       }
       <TimetableMenu selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
-      {/* <div 
+      <div 
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onTouchCancel={handleTouchEnd}
         // onPointerDown={e => console.log("down")}
         // onPointerMove={e => console.log("move")}
-        className="absolute top-0 bottom-0 left-0 right-0 z-1??? bg-green-500">
-      </div> */}
+        className="absolute top-32 bottom-32 left-0 right-0 z-1 bg-transparent">
+      </div>
     </>
   );
 }

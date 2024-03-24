@@ -33,17 +33,25 @@ export default function TimetableMenu( {selectedDay, setSelectedDay}: TimetableM
 
     return (
         <div className="fixed z-10 bottom-16 left-2/4 -translate-x-1/2 flex gap-2">
-            <button onClick={()=> handleClick("previous")} className="bg-zinc-900 border border-stone-50 rounded px-4"> {"<"} </button>
+            <button onClick={()=> handleClick("previous")} className="bg-fuchsia-900 rounded px-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width={30} id="left" x="0" y="0" version="1.1" viewBox="0 0 29 29">
+                    <path fill="none" stroke="#c8c8c8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m17.5 20.5-6-6 6-6"></path>
+                </svg>
+            </button>
             <select 
-            className="text-3xl bg-zinc-900 border border-stone-50 rounded px-3 text-center"
+            className="text-3xl bg-fuchsia-900 rounded px-3 py-1 text-center"
             value={selectedDay}
             onChange={(e) => setSelectedDay(e.target.value as 'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag')}
             >
                 {options.map((option) => (
-                    <option key={option} value={option} className="bg-zinc-700"> {option} </option> 
+                    <option key={option} value={option} className="bg-fuchsia-900"> {option} </option> 
                 ))}
             </select>
-            <button onClick={()=> handleClick("next")} className="bg-zinc-900 border border-stone-50 rounded px-4"> {">"} </button>
+            <button onClick={()=> handleClick("next")} className="bg-fuchsia-900 rounded px-4">
+                <svg className="scale-x-[-1]" xmlns="http://www.w3.org/2000/svg" width={30} id="left" x="0" y="0" version="1.1" viewBox="0 0 29 29">
+                    <path fill="none" stroke="#c8c8c8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m17.5 20.5-6-6 6-6"></path>
+                </svg>    
+             </button>
         </div>
     )
 }

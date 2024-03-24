@@ -49,25 +49,29 @@ export default function TimetableDisplay({ selectedDay, data }: TimetableDisplay
         <h2 className="text-4xl font-bold text-center">{selectedDay}</h2>
         {
           filteredExceptions.length > 0 &&
-          (<div className="bg-red-700 rounded-lg m-2 p-2">
-            <h3 className="text-2xl font-bold">⚠ Ausnahmen</h3>
-            {filteredExceptions.map(arr => (
-              <>
-                <p className="font-bold">{arr[0]}</p>
-                  <ul>
-                    { arr[1].map((dateString) => (
-                      <>
-                        {
-                          compareToToday(dateString) >= 0 && compareToToday(dateString) < 31 
-                            &&
-                          <li className="list-inside list-disc"> {createWarningText(dateString)} </li>
-                        }
-                      </>
-                    )) }
-
-                  </ul>
-              </>
-            ))}
+          (<div className="bg-yellow-800 rounded-lg border-2 border-yellow-600  m-4 p-2 flex gap-4">
+            <div className="self-start py-1 text-yellow-500">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="33" width="33" viewBox="0 -960 960 960" ><path d="M109-120q-11 0-20-5.5T75-140q-5-9-5.5-19.5T75-180l370-640q6-10 15.5-15t19.5-5q10 0 19.5 5t15.5 15l370 640q6 10 5.5 20.5T885-140q-5 9-14 14.5t-20 5.5H109Zm69-80h604L480-720 178-200Zm302-40q17 0 28.5-11.5T520-280q0-17-11.5-28.5T480-320q-17 0-28.5 11.5T440-280q0 17 11.5 28.5T480-240Zm0-120q17 0 28.5-11.5T520-400v-120q0-17-11.5-28.5T480-560q-17 0-28.5 11.5T440-520v120q0 17 11.5 28.5T480-360Zm0-100Z"/></svg>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold">Ausnahmen</h3>
+              {filteredExceptions.map(arr => (
+                <>
+                  <p className="font-bold">{arr[0]}</p>
+                    <ul>
+                      { arr[1].map((dateString) => (
+                        <>
+                          {
+                            compareToToday(dateString) >= 0 && compareToToday(dateString) < 15
+                              &&
+                            <li className="list-inside list-disc"> {createWarningText(dateString)} </li>
+                          }
+                        </>
+                      )) }
+                    </ul>
+                </>
+              ))}
+            </div>
           </div>)
         }
 
@@ -77,7 +81,7 @@ export default function TimetableDisplay({ selectedDay, data }: TimetableDisplay
           const bodyArr = classData.body.split("<br>")
           
           return (
-            <div key={classKey} className="bg-purple-800 rounded-lg m-2 p-1 flex gap-4">
+            <div key={classKey} className="bg-neutral-800 rounded-lg m-2 p-1 flex gap-4">
               <p className="text-sm text-center leading-none self-center">
                 {classData.start} <br />
                      I <br /> 
@@ -91,7 +95,7 @@ export default function TimetableDisplay({ selectedDay, data }: TimetableDisplay
                   <p key={paragraph} className="p-0">{paragraph}</p>
                 ))}
                 
-                <a href={classData.link[0]} target="_blank" className="text-green-500">
+                <a href={classData.link[0]} target="_blank" className="text-fuchsia-400">
                   {classData.link[1]}
                 </a>
               </div>
