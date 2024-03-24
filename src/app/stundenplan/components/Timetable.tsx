@@ -89,14 +89,14 @@ export default function Timetable ( {timeTableData}: TimetableProps ) {
         <TimetableDisplay selectedDay={selectedDay} data={timeTableData} /> : null
       }
       <TimetableMenu selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
-      <div 
+        {/*<div 
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onTouchCancel={handleTouchEnd}
         // onPointerDown={e => console.log("down")}
         // onPointerMove={e => console.log("move")}
         className="absolute top-32 bottom-32 left-0 right-0 z-1 bg-transparent">
-      </div>
+      </div>*/}
     </>
   );
 }
