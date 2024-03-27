@@ -26,24 +26,20 @@ interface ILinksItem {
 	linkText: string;
 }
 
-export default function TimetableDisplay({
-	selectedDayIndex,
-	data,
+export default function TimetableDisplay({ selectedDayIndex, data,
 }: TimetableDisplayProps) {
 
-	const dayExceptionsArray: string[][] = data.daysArray[
-		selectedDayIndex
-	].classEntries.map((classObj: IClassEntriesItem) => {
+	const dayExceptionsArray = data.daysArray[selectedDayIndex].classEntries.map((classObj: IClassEntriesItem, key) => {
 		return classObj.exceptions.length > 0
 			? [classObj.name, classObj.exceptions]
 			: null;
 	});
 
 	// Filter out null values from dayExceptionsArray
-	const filteredExceptions: string[][] = dayExceptionsArray.filter(
+	const filteredExceptions = dayExceptionsArray.filter(
 		(exceptions) => exceptions !== null
 	);
-	console.log(filteredExceptions);
+	console.log("Filtered exceptions: ",filteredExceptions);
 
 	return (
 		<div className="mt-3 pb-32">
@@ -73,26 +69,18 @@ export default function TimetableDisplay({
 									{arr[0]}
 								</p>
 								<ul>
-									{arr[1].map(
-										(dateString) => (
-											<>
-												{compareToToday(
-													dateString
-												) >=
-													0 &&
-													compareToToday(
-														dateString
-													) <
-														15 && (
-														<li className="list-inside list-disc">
-															{" "}
-															{createWarningText(
-																dateString
-															)}{" "}
-														</li>
-													)}
-											</>
-										)
+									{arr[1].map((dateString) => (
+										<>
+											{compareToToday(dateString) >= 0 && compareToToday(dateString) < 15 && (
+													<li className="list-inside list-disc">
+														{" "}
+														{createWarningText(
+															dateString
+														)}{" "}
+													</li>
+												)}
+										</>
+									)
 									)}
 								</ul>
 							</>
@@ -102,65 +90,65 @@ export default function TimetableDisplay({
 			)}
 
 			{data.daysArray[selectedDayIndex].classEntries.map((classKey, idx) => {
-					const classData = data.daysArray[selectedDayIndex].classEntries[idx];
+				const classData = data.daysArray[selectedDayIndex].classEntries[idx];
 
-					const bodyArr = classData.body.split("<br>");
+				const bodyArr = classData.body.split("<br>");
 
-					return (
-						<div
-							key={idx}
-							className="bg-neutral-800 rounded-lg m-2 p-1 flex gap-4"
-						>
-							<p className="text-sm text-center leading-none self-center">
-								{classData.start} <br />
-								I <br />
-								{classData.end}
+				return (
+					<div
+						key={idx}
+						className="bg-neutral-800 rounded-lg m-2 p-1 flex gap-4"
+					>
+						<p className="text-sm text-center leading-none self-center">
+							{classData.start} <br />
+							I <br />
+							{classData.end}
+						</p>
+						<div>
+							<p className="text-2xl font-bold">
+								{classData.name}
 							</p>
-							<div>
-								<p className="text-2xl font-bold">
-									{classData.name}
-								</p>
-								<p className="text-xs mb-2">
-									{classData.room} -{" "}
-									{classData.prof}
-								</p>
+							<p className="text-xs mb-2">
+								{classData.room} -{" "}
+								{classData.prof}
+							</p>
 
-								{bodyArr.map((paragraph) => (
-									<p
-										key={paragraph}
-										className="p-0"
+							{bodyArr.map((paragraph) => (
+								<p
+									key={paragraph}
+									className="p-0"
+								>
+									{paragraph}
+								</p>
+							))}
+
+							{classData.links.map(
+								(linkObj, linkIndex) => (
+									<a
+										href={
+											classData
+												.links[
+												linkIndex
+											]
+												.linkUrl
+										}
+										target="_blank"
+										className="text-fuchsia-400"
 									>
-										{paragraph}
-									</p>
-								))}
-
-								{classData.links.map(
-									(linkObj, linkIndex) => (
-										<a
-											href={
-												classData
-													.links[
-													linkIndex
-												]
-													.linkUrl
-											}
-											target="_blank"
-											className="text-fuchsia-400"
-										>
-											{
-												classData
-													.links[
-													linkIndex
-												]
-													.linkText
-											}
-										</a>
-									)
-								)}
-							</div>
+										{
+											classData
+												.links[
+												linkIndex
+											]
+												.linkText
+										}
+									</a>
+								)
+							)}
 						</div>
-					);
-				}
+					</div>
+				);
+			}
 			)}
 		</div>
 	);
