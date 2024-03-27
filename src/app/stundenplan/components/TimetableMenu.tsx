@@ -1,32 +1,31 @@
 import PropTypes from "prop-types";
 
 type TimetableMenuProps = {
-    selectedDay: 'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag';
-    setSelectedDay: React.Dispatch<React.SetStateAction<'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag'>>;
-  };
+    selectedDayIndex: number;
+    setSelectedDayIndex: any;
+}
 
-export default function TimetableMenu( {selectedDay, setSelectedDay}: TimetableMenuProps ) {
-    const sD = selectedDay
-    const test2 = setSelectedDay
+export default function TimetableMenu( {selectedDayIndex, setSelectedDayIndex}: TimetableMenuProps ) {
+
     const options: ('Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag')[] = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"]
     // const [selectedOption, setSelectedOption] = useState(options[0])
 
     const handleClick = (direction : string) => {
-        const currentIndex = options.indexOf(selectedDay);
+        // const currentIndex = options.indexOf(selectedDay);
 
 
         // setSelectedDay(options[currentIndex + 1]);
-        if (direction === 'next' && currentIndex === options.length - 1) {
-            setSelectedDay(options[0])
+        if (direction === 'next' && selectedDayIndex === options.length - 1) {
+            setSelectedDayIndex(0)
         }
-        else if (direction === 'previous' && currentIndex === 0) {
-            setSelectedDay(options[options.length - 1])
+        else if (direction === 'previous' && selectedDayIndex === 0) {
+            setSelectedDayIndex(options.length - 1)
         }
         else if (direction === 'next') {
-            setSelectedDay(options[currentIndex + 1]);
+            setSelectedDayIndex(selectedDayIndex + 1);
             } 
         else if (direction === 'previous') {
-            setSelectedDay(options[currentIndex - 1]);
+            setSelectedDayIndex(selectedDayIndex - 1);
             }
 
     }
@@ -40,11 +39,11 @@ export default function TimetableMenu( {selectedDay, setSelectedDay}: TimetableM
             </button>
             <select 
             className="text-3xl bg-fuchsia-900 rounded px-3 py-1 text-center"
-            value={selectedDay}
-            onChange={(e) => setSelectedDay(e.target.value as 'Montag' | 'Dienstag' | 'Mittwoch' | 'Donnerstag' | 'Freitag')}
+            value={selectedDayIndex}
+            onChange={(e) => setSelectedDayIndex(e.target.value)}
             >
-                {options.map((option) => (
-                    <option key={option} value={option} className="bg-fuchsia-900"> {option} </option> 
+                {options.map((option, idx) => (
+                    <option key={option} value={idx} className="bg-fuchsia-900"> {option} </option> 
                 ))}
             </select>
             <button onClick={()=> handleClick("next")} className="bg-fuchsia-900 rounded px-4">

@@ -1,102 +1,160 @@
 {
-    "Montag": [
-        {
-            "name": "Interkult. Komm. & Sprawi.",
-            "prof": "Tewes",
-            "room": "AM 126",
-            "start": "09:50",
-            "end": "11:20",
-            "body": "1.4. Ostermontag",
-            "link": ["https://www.dropbox.com/sh/4ckuiws1x2g8a3p/AABQrDcRdyhWoB7LiBhzTlvla?dl=0", "Dropbox"],
-            "exceptions": ["2024-04-01"]
-        },
-        {
-            "name": "Sprachmanagement",
-            "prof": "Gläser",
-            "room": "online",
-            "start": "15:40",
-            "end": "17:10",
-            "body": "1.4. Ostermontag",
-            "link": ["https://h-ka-de.zoom-x.de/j/66763376199?pwd=V1JMUGpObHhYVWwybmxOS1BNU1FGZz09", "Zoom"],
-            "exceptions": ["2024-04-01"]
-        }
-    ],
-    "Dienstag": [
-        {
-            "name": "Info-Systeme 1",
-            "prof": "Ziegler",
-            "room": "AM 307",
-            "start": "09:50",
-            "end": "17:10",
-            "body": "",
-            "link": [],
-            "exceptions": []
-        }
-    ],
-    "Mittwoch": [
-        {
-            "name": "Visuelle Komm.",
-            "prof": "Grunwald",
-            "room": "AM 301",
-            "start": "14:00",
-            "end": "17:10",
-            "body": "",
-            "link": [],
-            "exceptions": []
-        }
-    ],
-    "Donnerstag": [
-        {
-            "name": "Interkult. Komm.",
-            "prof": "Closs",
-            "room": "AM 301",
-            "start": "09:50",
-            "end": "13:00",
-            "body": "Nur an: <br> 4.4., 18.4., 2.5., 16.05., 6.6., 20.6., 4.7.",
-            "link": [],
-            "exceptions": ["2024-04-04", "2024-04-18", "2024-05-02", "2024-05-16", "2024-06-06", "2024-06-20", "2024-07-04"]
-        },
-        {
-            "name": "Sprach-Management",
-            "prof": "Drewer",
-            "room": "AM 126",
-            "start": "14:00",
-            "end": "15:30",
-            "body": "Nicht an: <br> 25.04 (aber Schulung), 16.05. <br> Ersatz: <br> Mo, 6.5., Mo 27.5. 11:30 - 13:00 AM 301 <br> 2 TMS Schulungstermine: <br> Do 25.4. 8:45 - 12:15, Mi 8.5. 8:45 - 11:20 AM 301",
-            "link": [],
-            "exceptions": ["2024-04-25", "2024-05-06", "2024-05-08", "2024-05-16", "2024-05-27"]
-        },
-        {
-            "name": "3D-Technologien",
-            "prof": "Schober",
-            "room": "AM 111",
-            "start": "15:40",
-            "end": "17:10",
-            "body": "",
-            "link": ["https://technischeredaktion.com/3D_Animation", "Website"],
-            "exceptions": []
-        }
-    ],
-    "Freitag": [
-        {
-            "name": "Technikdidaktik",
-            "prof": "Pittschellis",
-            "room": "AM 308",
-            "start": "09:50",
-            "end": "15:30",
-            "body": "Nur an: <br> 05.04., 12.04., 19.04., 17.05., 14.06., 21.06., 28.06",
-            "link": [],
-            "exceptions": ["2024-04-05", "2024-04-12", "2024-04-19", "2024-05-17", "2024-06-14", "2024-06-21", "2024-06-28"]
-        },
-        {
-            "name": "Praxisnachbereitung",
-            "prof": "Schober, Muthig, Grunwald",
-            "room": "AM 126",
-            "start": "15:40",
-            "end": "18:50",
-            "body": "Schober 22.3., Muthig 5.4., Grunwald 12.4.",
-            "link": [],
-            "exceptions": ["2024-03-22", "2024-04-05", "2024-04-12"]
-        }
-    ]
+	"daysArray": [
+		{
+			"day": "Montag",
+			"classEntries": [
+				{
+					"name": "Interkult. Komm. & Sprawi.",
+					"prof": "Tewes",
+					"room": "AM 126",
+					"start": "09:50",
+					"end": "11:20",
+					"body": "1.4. Ostermontag",
+					"links": [
+						{
+							"linkUrl": "https://www.dropbox.com/sh/4ckuiws1x2g8a3p/AABQrDcRdyhWoB7LiBhzTlvla?dl=0",
+							"linkText": "Dropbox"
+						}
+					],
+					"exceptions": ["2024-04-01"]
+				},
+				{
+					"name": "Sprachmanagement",
+					"prof": "Gläser",
+					"room": "online",
+					"start": "15:40",
+					"end": "17:10",
+					"body": "1.4. Ostermontag",
+					"links": [
+						{
+							"linkUrl": "https://h-ka-de.zoom-x.de/j/66763376199?pwd=V1JMUGpObHhYVWwybmxOS1BNU1FGZz09",
+							"linkText": "Zoom"
+						}
+					],
+					"exceptions": ["2024-04-01"]
+				}
+			]
+		},
+
+		{
+			"day": "Dienstag",
+			"classEntries": [
+				{
+					"name": "Info-Systeme 1",
+					"prof": "Ziegler",
+					"room": "AM 307",
+					"start": "09:50",
+					"end": "17:10",
+					"body": "",
+					"links": [],
+					"exceptions": []
+				}
+			]
+		},
+
+		{
+			"day": "Mittwoch",
+			"classEntries": [
+				{
+					"name": "Visuelle Komm.",
+					"prof": "Grunwald",
+					"room": "AM 301",
+					"start": "14:00",
+					"end": "17:10",
+					"body": "",
+					"links": [],
+					"exceptions": []
+				}
+			]
+		},
+
+		{
+			"day": "Donnerstag",
+			"classEntries": [
+				{
+					"name": "Interkult. Komm.",
+					"prof": "Closs",
+					"room": "AM 301",
+					"start": "09:50",
+					"end": "13:00",
+					"body": "Nur an: <br> 4.4., 18.4., 2.5., 16.05., 6.6., 20.6., 4.7.",
+					"links": [],
+					"exceptions": [
+						"2024-04-04",
+						"2024-04-18",
+						"2024-05-02",
+						"2024-05-16",
+						"2024-06-06",
+						"2024-06-20",
+						"2024-07-04"
+					]
+				},
+				{
+					"name": "Sprach-Management",
+					"prof": "Drewer",
+					"room": "AM 126",
+					"start": "14:00",
+					"end": "15:30",
+					"body": "Nicht an: <br> 25.04 (aber Schulung), 16.05. <br> Ersatz: <br> Mo, 6.5., Mo 27.5. 11:30 - 13:00 AM 301 <br> 2 TMS Schulungstermine: <br> Do 25.4. 8:45 - 12:15, Mi 8.5. 8:45 - 11:20 AM 301",
+					"links": [],
+					"exceptions": [
+						"2024-04-25",
+						"2024-05-06",
+						"2024-05-08",
+						"2024-05-16",
+						"2024-05-27"
+					]
+				},
+				{
+					"name": "3D-Technologien",
+					"prof": "Schober",
+					"room": "AM 111",
+					"start": "15:40",
+					"end": "17:10",
+					"body": "",
+					"links": [
+						{
+							"linkUrl": "https://technischeredaktion.com/3D_Animation",
+							"linkText": "Website"
+						}
+					],
+					"exceptions": []
+				}
+			]
+		},
+
+		{
+			"day": "Freitag",
+			"classEntries": [
+				{
+					"name": "Technikdidaktik",
+					"prof": "Pittschellis",
+					"room": "AM 308",
+					"start": "09:50",
+					"end": "15:30",
+					"body": "Nur an: <br> 05.04., 12.04., 19.04., 17.05., 14.06., 21.06., 28.06",
+					"links": [],
+					"exceptions": [
+						"2024-04-05",
+						"2024-04-12",
+						"2024-04-19",
+						"2024-05-17",
+						"2024-06-14",
+						"2024-06-21",
+						"2024-06-28"
+					]
+				},
+				{
+					"name": "Praxisnachbereitung",
+					"prof": "Schober, Muthig, Grunwald",
+					"room": "AM 126",
+					"start": "15:40",
+					"end": "18:50",
+					"body": "Muthig 5.4., Grunwald 12.4.",
+					"links": [],
+					"exceptions": ["2024-04-05", "2024-04-12"]
+				}
+			]
+		}
+	]
 }
