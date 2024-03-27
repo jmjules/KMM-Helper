@@ -29,7 +29,7 @@ interface ILinksItem {
 export default function TimetableDisplay({ selectedDayIndex, data,
 }: TimetableDisplayProps) {
 
-	const dayExceptionsArray = data.daysArray[selectedDayIndex].classEntries.map((classObj: IClassEntriesItem, key) => {
+	const dayExceptionsArray = data.daysArray[selectedDayIndex].classEntries.map((classObj: IClassEntriesItem) => {
 		return classObj.exceptions.length > 0
 			? [classObj.name, classObj.exceptions]
 			: null;
@@ -63,16 +63,16 @@ export default function TimetableDisplay({ selectedDayIndex, data,
 						<h3 className="text-2xl font-bold">
 							Ausnahmen
 						</h3>
-						{filteredExceptions.map((arr) => (
+						{filteredExceptions.map((arr, index) => (
 							<>
-								<p className="font-bold">
+								<p className="font-bold" key={index}>
 									{arr[0]}
 								</p>
 								<ul>
-									{arr[1].map((dateString) => (
+									{arr[1].map((dateString, index) => (
 										<>
 											{compareToToday(dateString) >= 0 && compareToToday(dateString) < 15 && (
-													<li className="list-inside list-disc">
+													<li className="list-inside list-disc" key={index}>
 														{" "}
 														{createWarningText(
 															dateString
@@ -125,22 +125,13 @@ export default function TimetableDisplay({ selectedDayIndex, data,
 							{classData.links.map(
 								(linkObj, linkIndex) => (
 									<a
-										href={
-											classData
-												.links[
-												linkIndex
-											]
-												.linkUrl
-										}
+										href={linkObj.linkUrl}
 										target="_blank"
 										className="text-fuchsia-400"
+										key={linkIndex}
 									>
 										{
-											classData
-												.links[
-												linkIndex
-											]
-												.linkText
+											linkObj.linkText
 										}
 									</a>
 								)
