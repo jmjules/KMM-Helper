@@ -42,6 +42,15 @@ export default function Home() {
             <h2 className="text-xl font-bold">???</h2>
             Prüfungen/ Abgaben
           </Link>
+
+
+          <Link
+            href="/stundenplanSlider"
+            className="text-xl rounded-lg bg-stone-800 px-5 py-7 flex gap-5 items-center"
+          >
+            <img src="/icons/icon-timetable.svg" className="w-9" />
+            Stundenplan mit slider
+          </Link>
         </nav>
       </div>
     </main>
