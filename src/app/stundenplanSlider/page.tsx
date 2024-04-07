@@ -13,7 +13,7 @@ export default async function TimetablePage() {
 	return (
 		<main className="min-h-screen flex-col items-center justify-between">
 			<SubPageHeader
-				pageTitle="Stundenplan mit Slider"
+				pageTitle="Stundenplan"
 				colorString="bg-fuchsia-900"
 			/>
 

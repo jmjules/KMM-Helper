@@ -43,7 +43,7 @@ function ClassItem ({classEntry} ) {
 				{classEntry.end}
 			</div>
 			<div>
-				<h3 className="text-2xl font-bold"> {classEntry.name} </h3>
+				<h3 className="text-xl font-bold"> {classEntry.name} </h3>
 				<p className="text-xs mb-2">
 					{classEntry.room} -{" "}
 					{classEntry.prof}
@@ -76,7 +76,7 @@ function DayItem({dayData, key}){
 	const dayExceptionsArray = getExceptions(dayData)
 
 	return (
-		<div key={key}>
+		<div key={key} className=" mx-4" >
 			<h2 className="text-4xl font-bold text-center"> {dayData.day} </h2>
 			{dayExceptionsArray.length > 0 &&
 				<ExceptionDisplay exceptionsArray={dayExceptionsArray} />
@@ -105,10 +105,19 @@ export default function TimetableDisplaySlider({ selectedDayIndex, data}: Timeta
 	
 
 	return (
-		<div className="mt-3 pb-32">
+		<div className="mt-3 mx-4 pb-32">
 			<swiper-container
 			 loop="true"
 			 initial-slide={selectedDayIndex}
+			 effect="coverflow"
+			 slides-per-view="auto"
+			 centered-slides="true"
+			 
+			 coverflow-effect-rotate="5"
+			 coverflow-effect-depth="100"
+			 coverflow-effect-stretch="0"
+			 coverflow-effect-slide-shadows="false"
+			 coverflow-effect-modifier="3"
 			>
 			{daysArray.map((dayData, index) => (
 				<swiper-slide key="index" >
