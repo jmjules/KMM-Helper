@@ -40,8 +40,8 @@ export default function Timetable({timetableData} : TimetableProps) {
 		const currentDate = new Date();
 		const currentDayIndex = currentDate.getDay();
 
-		if (currentDayIndex > 0 && currentDayIndex < 5) {
-			setSelectedDayIndex(currentDayIndex-1);     //-1 bc Date.getDay() => 0 for sunday, 1 for monday, etc...
+		if (currentDayIndex > 0 && currentDayIndex < 6) {	// 1-5 are mon to fri
+			setSelectedDayIndex(currentDayIndex-1);     	//-1 bc Date.getDay() => 0 for sunday, 1 for monday, etc...
 		}
 
 		setHasRendered(true);
