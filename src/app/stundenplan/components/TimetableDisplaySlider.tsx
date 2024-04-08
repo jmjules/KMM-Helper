@@ -56,16 +56,16 @@ function ClassItem ({classEntry} ) {
 				))}
 
 				{classEntry.links.map((linkObj, linkIndex) => (
-					<a
-						href={linkObj.linkUrl}
-						target="_blank"
-						className="text-fuchsia-400"
-						key={linkIndex}
-					>
-						{
-							linkObj.linkText
-						}
-					</a>
+					<p>
+						<a
+						 href={linkObj.linkUrl}
+						 target="_blank"
+						 className="text-fuchsia-400"
+						 key={linkIndex}
+						>
+							{linkObj.linkText}
+						</a>
+					</p>
 				))}
 			</div>
 		</div>

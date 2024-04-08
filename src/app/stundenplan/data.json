@@ -9,14 +9,14 @@
 					"room": "AM 126",
 					"start": "09:50",
 					"end": "11:20",
-					"body": "1.4. Ostermontag",
+					"body": "Nächsten 2 Male in 308",
 					"links": [
 						{
 							"linkUrl": "https://www.dropbox.com/sh/4ckuiws1x2g8a3p/AABQrDcRdyhWoB7LiBhzTlvla?dl=0",
 							"linkText": "Dropbox"
 						}
 					],
-					"exceptions": ["2024-04-01"]
+					"exceptions": ["2024-04-15","2024-04-22" ]
 				},
 				{
 					"name": "Sprachmanagement",
@@ -24,14 +24,19 @@
 					"room": "online",
 					"start": "15:40",
 					"end": "17:10",
-					"body": "1.4. Ostermontag",
+					"body": "",
 					"links": [
 						{
 							"linkUrl": "https://h-ka-de.zoom-x.de/j/66763376199?pwd=V1JMUGpObHhYVWwybmxOS1BNU1FGZz09",
 							"linkText": "Zoom"
+						},
+						{
+							"linkUrl": "https://www.dropbox.com/scl/fo/9lonuufxrev71uivod2db/h?rlkey=qojc7xf4x2dpb8y9g0qjr6s3v&dl=0",
+							"linkText": "Dropbox"
 						}
+
 					],
-					"exceptions": ["2024-04-01"]
+					"exceptions": []
 				}
 			]
 		},
@@ -77,10 +82,9 @@
 					"room": "AM 301",
 					"start": "09:50",
 					"end": "13:00",
-					"body": "Nur an: <br> 4.4., 18.4., 2.5., 16.05., 6.6., 20.6., 4.7.",
+					"body": "Nur an: <br> 18.4., 2.5., 16.05., 6.6., 20.6., 4.7.",
 					"links": [],
 					"exceptions": [
-						"2024-04-04",
 						"2024-04-18",
 						"2024-05-02",
 						"2024-05-16",
@@ -132,10 +136,9 @@
 					"room": "AM 308",
 					"start": "09:50",
 					"end": "15:30",
-					"body": "Nur an: <br> 05.04., 12.04., 19.04., 17.05., 14.06., 21.06., 28.06",
+					"body": "Nur an: <br> 12.04., 19.04., 17.05., 14.06., 21.06., 28.06",
 					"links": [],
 					"exceptions": [
-						"2024-04-05",
 						"2024-04-12",
 						"2024-04-19",
 						"2024-05-17",
@@ -150,9 +153,9 @@
 					"room": "AM 126",
 					"start": "15:40",
 					"end": "18:50",
-					"body": "Muthig 5.4., Grunwald 12.4.",
+					"body": "Grunwald 12.4.",
 					"links": [],
-					"exceptions": ["2024-04-05", "2024-04-12"]
+					"exceptions": ["2024-04-12"]
 				}
 			]
 		}

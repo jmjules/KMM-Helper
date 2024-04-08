@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
 
-import TimetableDisplay from "./TimetableDisplay";
+import TimetableDisplaySlider from "./TimetableDisplaySlider";
 import TimetableMenu from "./TimetableMenu";
 
 
@@ -40,8 +40,8 @@ export default function Timetable({timetableData} : TimetableProps) {
 		const currentDate = new Date();
 		const currentDayIndex = currentDate.getDay();
 
-		if (currentDayIndex > 0 && currentDayIndex < 5) {
-			setSelectedDayIndex(currentDayIndex-1);     //-1 bc Date.getDay() => 0 for sunday, 1 for monday, etc...
+		if (currentDayIndex > 0 && currentDayIndex < 6) {	// 1-5 are mon to fri
+			setSelectedDayIndex(currentDayIndex-1);     	//-1 bc Date.getDay() => 0 for sunday, 1 for monday, etc...
 		}
 
 		setHasRendered(true);
@@ -75,23 +75,16 @@ export default function Timetable({timetableData} : TimetableProps) {
 	return (
 		<>
 			{hasRendered ? (
-				<TimetableDisplay
+				<TimetableDisplaySlider
 					selectedDayIndex={selectedDayIndex}
 					data={timetableData}
 				/>
 			) : null}
-			<TimetableMenu
+			{/* <TimetableMenu
 				selectedDayIndex={selectedDayIndex}
 				setSelectedDayIndex={setSelectedDayIndex}
-			/>
-			{/* <div
-				onTouchStart={handleTouchStart}
-				onTouchEnd={handleTouchEnd}
-				onTouchCancel={handleTouchEnd}
-				// onPointerDown={e => console.log("down")}
-				// onPointerMove={e => console.log("move")}
-				className="absolute top-32 bottom-32 left-0 right-0 z-1 bg-transparent"
-			></div> */}
+			/> */}
+
 		</>
 	);
 }

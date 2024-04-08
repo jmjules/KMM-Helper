@@ -19,7 +19,7 @@ export default function Home() {
 
         <nav className="flex flex-col md:flex-row gap-5 mt-5">
           <Link
-            href="/stundenplanSlider"
+            href="/stundenplan"
             className="text-xl rounded-lg bg-stone-800 px-5 py-7 flex gap-5 items-center"
           >
             <img src="/icons/icon-timetable.svg" className="w-9" />

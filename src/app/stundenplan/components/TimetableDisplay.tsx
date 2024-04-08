@@ -26,8 +26,7 @@ interface ILinksItem {
 	linkText: string;
 }
 
-export default function TimetableDisplay({ selectedDayIndex, data,
-}: TimetableDisplayProps) {
+export default function TimetableDisplay({ selectedDayIndex, data}: TimetableDisplayProps) {
 
 	const dayExceptionsArray = data.daysArray[selectedDayIndex].classEntries.map((classObj: IClassEntriesItem) => {
 		return classObj.exceptions.length > 0
