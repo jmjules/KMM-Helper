@@ -3,7 +3,7 @@
 import { register } from "swiper/element/bundle";
 
 import "swiper/css"
-// register swiüer slider
+// register swiper slider
 register();
 
 type TimetableDisplayProps = {
