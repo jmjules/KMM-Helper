@@ -56,12 +56,11 @@ function ClassItem ({classEntry} ) {
 				))}
 
 				{classEntry.links.map((linkObj, linkIndex) => (
-					<p>
+					<p key={linkIndex}>
 						<a
 						 href={linkObj.linkUrl}
 						 target="_blank"
 						 className="text-fuchsia-400"
-						 key={linkIndex}
 						>
 							{linkObj.linkText}
 						</a>
