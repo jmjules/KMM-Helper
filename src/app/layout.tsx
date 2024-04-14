@@ -33,7 +33,7 @@ export default function RootLayout({
 
 					</div>
 
-					<nav className="fixed z-10 bottom-0 left-0 right-0 p-3 grid grid-flow-col gap-3 bg-stone-700">
+					<nav className="fixed z-10 bottom-0 left-0 right-0 p-3 pb-5 grid grid-flow-col gap-3 bg-stone-700">
 						<Link href="/" className="text-xl rounded-lg bg-stone-800 p-3 flex place-content-center">
 						<img src="/icons/icon-timetable.svg" className="w-9" />
 						</Link>
