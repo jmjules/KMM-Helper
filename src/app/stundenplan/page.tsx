@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 
-import Timetable from "./components/Timetable";
 import SubPageHeader from "../components/SubPageHeader";
+import Timetable from "../components/Stundenplan/Timetable";
 
 export default async function TimetablePage() {
 	const file = await fs.readFile(
@@ -14,7 +14,6 @@ export default async function TimetablePage() {
 		<main className="min-h-screen flex-col items-center justify-between">
 			<SubPageHeader
 				pageTitle="Stundenplan"
-				colorString="bg-fuchsia-900"
 			/>
 
 			<Timetable timetableData={data} />

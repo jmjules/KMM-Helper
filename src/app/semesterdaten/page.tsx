@@ -1,5 +1,4 @@
 import { promises as fs } from "fs";
-import Link from "next/link";
 import SubPageHeader from "../components/SubPageHeader";
 
 
@@ -11,7 +10,7 @@ export default async function SemesterData () {
 
   return (
     <main className="min-h-screen flex-col items-center justify-between">
-      <SubPageHeader pageTitle="Semesterdaten" colorString="bg-orange-700" />
+      <SubPageHeader pageTitle="Semesterdaten" />
       
 
 

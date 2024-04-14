@@ -104,7 +104,7 @@ export default function TimetableDisplaySlider({ selectedDayIndex, data}: Timeta
 	
 
 	return (
-		<div className="mt-3 mx-auto px-3 pb-5 max-w-[500px] ">
+		<div className="mt-3 mx-auto px-3 max-w-[500px] ">
 			<swiper-container
 			 loop="true"
 			 initial-slide={selectedDayIndex}
