@@ -82,10 +82,20 @@
 					"room": "AM 301",
 					"start": "09:50",
 					"end": "13:00",
-					"body": "Nur an: <br> 18.4., 2.5., 16.05., 6.6., 20.6., 4.7.",
-					"links": [],
+					"body": "Nur an: <br> 2.5., 16.05., 6.6., 20.6., 4.7.",
+					"links": [
+						{
+							"linkUrl": "https://karlifi.org/",
+							"linkText": "Karlifi.org"
+						},
+						{
+							"linkUrl": "https://ua.infoarchitect.eu/",
+							"linkText": "Moodle"
+						}
+
+						
+					],
 					"exceptions": [
-						"2024-04-18",
 						"2024-05-02",
 						"2024-05-16",
 						"2024-06-06",
@@ -136,26 +146,14 @@
 					"room": "AM 308",
 					"start": "09:50",
 					"end": "15:30",
-					"body": "Nur an: <br> 12.04., 19.04., 17.05., 14.06., 21.06., 28.06",
+					"body": "Nur an: <br> 17.05., 14.06., 21.06., 28.06",
 					"links": [],
 					"exceptions": [
-						"2024-04-12",
-						"2024-04-19",
 						"2024-05-17",
 						"2024-06-14",
 						"2024-06-21",
 						"2024-06-28"
 					]
-				},
-				{
-					"name": "Praxisnachbereitung",
-					"prof": "Schober, Muthig, Grunwald",
-					"room": "AM 126",
-					"start": "15:40",
-					"end": "18:50",
-					"body": "Grunwald 12.4.",
-					"links": [],
-					"exceptions": ["2024-04-12"]
 				}
 			]
 		}
