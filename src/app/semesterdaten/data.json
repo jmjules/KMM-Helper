@@ -7,11 +7,11 @@
     "startOfClasses": "18.03.2024",
     "endOfClasses": "05.07.2024",
     "vacationDays": [
-                        {"date": "02.04.2024", "reason": "Ostern"},
-                        {"date": "21.05.2024", "reason": "Pfingsten"},
-                        {"date": "22.05.2024", "reason": "Pfingsten"},
-                        {"date": "23.05.2024", "reason": "Pfingsten"},
-                        {"date": "24.05.2024", "reason": "Pfingsten"}
+                      {"date": "02.04.2024", "reason": "Ostern"},
+                      {"date": "21.05.2024", "reason": "Pfingsten"},
+                      {"date": "22.05.2024", "reason": "Pfingsten"},
+                      {"date": "23.05.2024", "reason": "Pfingsten"},
+                      {"date": "24.05.2024", "reason": "Pfingsten"}
                     ],
     "startOfExams": "08.07.2024",
     "endOfExams": "26.07.2024",
@@ -22,5 +22,10 @@
     "letzterTagNoteneingabe": "04.08.2024"
 
   },
-  "prüfungen": []
+  "prüfungen": [],
+  "links": [
+            {"linkText": "Webmail", "linkUrl": "https://owa.h-ka.de/"},
+            {"linkText": "Generelle KMM-Dokumente", "linkUrl": "https://technischeredaktion.com/kmm-downloads/kmm-bachelor-downloads/"},
+            {"linkText": "Online-Service (Testbetrieb)", "linkUrl": "https://qis.hs-karlsruhe.de/"}
+  ]
 }

@@ -28,6 +28,23 @@ export default async function SemesterData () {
           <p className="text-xs"> {semester.vacationDays[0].date} ({semester.vacationDays[0].reason}) </p>
           <p className="text-xs"> {semester.vacationDays[1].date} - {semester.vacationDays[4].date} ({semester.vacationDays[1].reason}) </p>
         </div>
+
+        <div className="m-5 p-6 rounded-lg bg-neutral-800">
+          <h2 className="text-2xl font-bold">Links</h2>
+          {
+            data.links.map((link, linkIndex)=>(
+              <p key={linkIndex}>
+                <a 
+                  href={link.linkUrl} 
+                  target="_blank"
+						      className="text-fuchsia-400" 
+                >
+                  {link.linkText}
+                </a>
+              </p>
+            ))
+          }
+        </div>
       </div>
     
     
