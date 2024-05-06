@@ -108,11 +108,10 @@
 					"room": "AM 126",
 					"start": "14:00",
 					"end": "15:30",
-					"body": "Nicht an: <br> 16.05. <br> Ersatz: <br> Mo, 6.5., Mo 27.5. 11:30 - 13:00 AM 301 <br> 2. TMS Schulungstermin: <br> Mi 8.5. 8:45 - 11:20 AM 307",
+					"body": "Ersatz: Mo 27.5. 11:30 - 13:00 AM 301 <br> 2. TMS Schulungstermin: <br> Mi 8.5. 8:45 - 11:20 AM 307",
 					"links": [],
 					"exceptions": [
 						"2024-05-08",
-						"2024-05-16",
 						"2024-05-27"
 					]
 				},
