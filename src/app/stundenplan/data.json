@@ -9,14 +9,14 @@
 					"room": "AM 126",
 					"start": "09:50",
 					"end": "11:20",
-					"body": "fällt aus am 29.",
+					"body": "",
 					"links": [
 						{
 							"linkUrl": "https://www.dropbox.com/sh/4ckuiws1x2g8a3p/AABQrDcRdyhWoB7LiBhzTlvla?dl=0",
 							"linkText": "Dropbox"
 						}
 					],
-					"exceptions": ["2024-04-29" ]
+					"exceptions": []
 				},
 				{
 					"name": "Sprachmanagement",
@@ -24,7 +24,7 @@
 					"room": "online",
 					"start": "15:40",
 					"end": "17:10",
-					"body": "fällt aus am 29.",
+					"body": "",
 					"links": [
 						{
 							"linkUrl": "https://h-ka-de.zoom-x.de/j/66763376199?pwd=V1JMUGpObHhYVWwybmxOS1BNU1FGZz09",
@@ -36,7 +36,7 @@
 						}
 
 					],
-					"exceptions": ["2024-04-29"]
+					"exceptions": []
 				}
 			]
 		},
@@ -82,7 +82,7 @@
 					"room": "AM 301",
 					"start": "09:50",
 					"end": "13:00",
-					"body": "Nur an: <br> 2.5., 16.05., 6.6., 20.6., 4.7.",
+					"body": "Nur an: <br> 16.05., 6.6., 20.6., 4.7.",
 					"links": [
 						{
 							"linkUrl": "https://karlifi.org/",
@@ -96,7 +96,6 @@
 						
 					],
 					"exceptions": [
-						"2024-05-02",
 						"2024-05-16",
 						"2024-06-06",
 						"2024-06-20",
@@ -112,7 +111,6 @@
 					"body": "Nicht an: <br> 16.05. <br> Ersatz: <br> Mo, 6.5., Mo 27.5. 11:30 - 13:00 AM 301 <br> 2. TMS Schulungstermin: <br> Mi 8.5. 8:45 - 11:20 AM 307",
 					"links": [],
 					"exceptions": [
-						"2024-05-06",
 						"2024-05-08",
 						"2024-05-16",
 						"2024-05-27"
