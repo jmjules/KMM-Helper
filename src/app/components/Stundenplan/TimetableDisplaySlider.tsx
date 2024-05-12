@@ -120,10 +120,10 @@ export default function TimetableDisplaySlider({ selectedDayIndex, data}: Timeta
 			))
 			}	
 			</swiper-container>	
-			<div className="prev-arrow bg-transparent absolute z-[300] top-[5px] md:top-[50%] left-[10%] md:left-[-5%]">
+			<div className="prev-arrow content-center px-1 absolute z-[300] top-[5px] md:top-[10%] md:bottom-[10%] left-[10%] md:left-[-5%]">
 				<FaArrowLeft className="w-8 h-8" />
 			</div>
-			<div className="next-arrow bg-transparent absolute z-[300] top-[5px] md:top-[50%] right-[10%] md:right-[-5%]">
+			<div className="next-arrow content-center px-1 absolute z-[300] top-[5px] md:top-[10%] md:bottom-[10%] right-[10%] md:right-[-5%]">
 				<FaArrowRight className="w-8 h-8" />
 			</div>
 		</div>

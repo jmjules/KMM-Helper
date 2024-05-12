@@ -30,18 +30,11 @@ export default function RootLayout({children, }: Readonly<{children: React.React
 
 					</div>
 
-					<nav className="fixed z-10 bottom-0 left-0 right-0 p-3 pb-5 grid grid-flow-col gap-3 bg-stone-700">
+					<nav className="fixed z-10 bottom-0 left-0 right-0 p-3 pb-5 grid grid-flow-col gap-3 bg-neutral-800 rounded-t-xl shadow-nav">
 						<NavLink pathString={"/"} iconString={"timetable"} />
-						
 						<NavLink pathString={"/semesterdaten"} iconString={"calendar"} />
+						<NavLink pathString={"/exams"} iconString={"exams"} />
 
-						{/* <Link href="/semesterdaten" className="text-xl rounded-lg bg-stone-800 p-3 flex place-content-center"> 
-						<img src="/icons/icon-calendar.svg" className="w-9" />
-						</Link> */}
-
-						<Link href="" className="text-xl rounded-lg bg-stone-800 p-3"> 
-						<h2 className="text-xl font-bold flex place-content-center" >???</h2>
-						</Link>
 					</nav>
 				</main>
 				
