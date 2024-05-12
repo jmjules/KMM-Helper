@@ -1,6 +1,7 @@
 //@ts-nocheck
 
 import { register } from "swiper/element/bundle";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import "swiper/css"
 // register swiper slider
@@ -104,10 +105,12 @@ export default function TimetableDisplaySlider({ selectedDayIndex, data}: Timeta
 	
 
 	return (
-		<div className="mt-3 mx-auto px-3 max-w-[690px] ">
+		<div className="mt-3 mx-auto px-3 max-w-[690px] relative">
 			<swiper-container
 			 loop="true"
 			 initial-slide={selectedDayIndex}
+			 navigation-prev-el=".prev-arrow"
+			 navigation-next-el=".next-arrow"
 			>
 			{daysArray.map((dayData, index) => (
 				<swiper-slide key="index" >
@@ -117,6 +120,12 @@ export default function TimetableDisplaySlider({ selectedDayIndex, data}: Timeta
 			))
 			}	
 			</swiper-container>	
+			<div className="prev-arrow bg-transparent absolute z-[300] top-[5px] md:top-[50%] left-[10%] md:left-[-5%]">
+				<FaArrowLeft className="w-8 h-8" />
+			</div>
+			<div className="next-arrow bg-transparent absolute z-[300] top-[5px] md:top-[50%] right-[10%] md:right-[-5%]">
+				<FaArrowRight className="w-8 h-8" />
+			</div>
 		</div>
 	);
 }
