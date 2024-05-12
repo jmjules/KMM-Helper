@@ -24,7 +24,7 @@
 					"room": "online",
 					"start": "15:40",
 					"end": "17:10",
-					"body": "",
+					"body": "Haben gevoted, dass es am 13. ausfällt",
 					"links": [
 						{
 							"linkUrl": "https://h-ka-de.zoom-x.de/j/66763376199?pwd=V1JMUGpObHhYVWwybmxOS1BNU1FGZz09",
@@ -36,7 +36,7 @@
 						}
 
 					],
-					"exceptions": []
+					"exceptions": ["2024-05-13"]
 				}
 			]
 		},
@@ -61,6 +61,16 @@
 			"day": "Mittwoch",
 			"classEntries": [
 				{
+					"name": "Praxisnachbereitung (2. Semester Ding)",
+					"prof": "Muthig",
+					"room": "AM 111",
+					"start": "9:50",
+					"end": "13:00",
+					"body": "",
+					"links": [],
+					"exceptions": []
+				},
+				{
 					"name": "Visuelle Komm.",
 					"prof": "Grunwald",
 					"room": "AM 301",
@@ -70,6 +80,7 @@
 					"links": [],
 					"exceptions": []
 				}
+				
 			]
 		},
 
@@ -108,10 +119,9 @@
 					"room": "AM 126",
 					"start": "14:00",
 					"end": "15:30",
-					"body": "Ersatz: Mo 27.5. 11:30 - 13:00 AM 301 <br> 2. TMS Schulungstermin: <br> Mi 8.5. 8:45 - 11:20 AM 307",
+					"body": "Ersatz: Mo 27.5. 11:30 - 13:00 AM 301",
 					"links": [],
 					"exceptions": [
-						"2024-05-08",
 						"2024-05-27"
 					]
 				},
