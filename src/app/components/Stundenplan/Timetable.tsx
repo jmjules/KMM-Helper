@@ -47,30 +47,7 @@ export default function Timetable({timetableData} : TimetableProps) {
 		setHasRendered(true);
 	}, []);
 
-	//swipe support
-	// const [startX, setStartX] = useState(null);
-
-	// const handleTouchStart = (event) => {
-	// 	setStartX(event.touches[0].clientX);
-	// 	console.log("touch started");
-	// };
-
-	// const handleTouchEnd = (event) => {
-	// 	console.log("handle end or cancel");
-
-	// 	const endX = event.changedTouches[0].clientX;
-	// 	const deltaX = endX - startX;
-
-	// 	const selectedIndex = days.indexOf(selectedDay);
-
-	// 	if (deltaX > 50 && selectedIndex > 0) {
-	// 		setSelectedDay(days[selectedIndex - 1]); // Swipe right, go to previous day
-	// 		console.log("right");
-	// 	} else if (deltaX < -50 && selectedIndex < days.length - 1) {
-	// 		setSelectedDay(days[selectedIndex + 1]); // Swipe left, go to next day
-	// 		console.log("left");
-	// 	}
-	// };
+	
 
 	return (
 		<>

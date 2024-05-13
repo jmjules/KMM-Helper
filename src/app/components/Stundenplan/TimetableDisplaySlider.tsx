@@ -4,6 +4,7 @@ import { register } from "swiper/element/bundle";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import "swiper/css"
+import { Fragment } from "react";
 // register swiper slider
 register();
 
@@ -102,13 +103,7 @@ function DayItem({dayData, dayIndex}){
 export default function TimetableDisplaySlider({ selectedDayIndex, data}: TimetableDisplayProps) {
 
 	const daysArray = data.daysArray
-
-
-	// Filter out null values from dayExceptionsArray
-
-	console.log(daysArray);
 	
-
 	return (
 		<div className="mt-3 mx-auto px-3 max-w-[690px] relative">
 			<swiper-container
@@ -118,7 +113,7 @@ export default function TimetableDisplaySlider({ selectedDayIndex, data}: Timeta
 			 navigation-next-el=".next-arrow"
 			>
 			{daysArray.map((dayData, index) => (
-				<swiper-slide key="index" >
+				<swiper-slide key={index} >
 
 					<DayItem dayData={dayData} dayIndex={index}  />
 
@@ -137,7 +132,6 @@ export default function TimetableDisplaySlider({ selectedDayIndex, data}: Timeta
 }
 
 function ExceptionDisplay( {exceptionsArray} ) {
-	console.log("array in display: ", exceptionsArray);
 	
 	if (exceptionsArray[0] === undefined) {
 		return;
@@ -160,26 +154,26 @@ function ExceptionDisplay( {exceptionsArray} ) {
 				Ausnahmen
 			</h3>
 			{exceptionsArray.map((arr, index) => (
-				<>
-					<p className="font-bold" key={index}>
+				<Fragment key={index}>
+					<p className="font-bold">
 						{arr[0]}
 					</p>
 					<ul>
 						{arr[1].map((dateString, index) => (
-							<>
+							<Fragment key={index}>
 								{compareToToday(dateString) >= 0 && compareToToday(dateString) < 15 && (
-										<li className="list-inside list-disc" key={index}>
+										<li className="list-inside list-disc">
 											{" "}
 											{createWarningText(
 												dateString
 											)}{" "}
 										</li>
 									)}
-							</>
+							</Fragment>
 						)
 						)}
 					</ul>
-				</>
+				</Fragment>
 			))}
 		</div>
 	</div>)
@@ -195,8 +189,6 @@ function getExceptions(dayData : IDaysArrayItem) {
 		}
 	})
 	.filter((exception) => exception !== undefined)
-
-	console.log("hier exceptions", dayData.day, dayExceptionsArray);
 	
 	return dayExceptionsArray;
 }
