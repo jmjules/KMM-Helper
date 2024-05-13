@@ -72,12 +72,17 @@ function ClassItem ({classEntry} ) {
 	)
 }
 
-function DayItem({dayData, key}){
+function DayItem({dayData, dayIndex}){
 	const dayExceptionsArray = getExceptions(dayData)
 
 	return (
-		<div key={key} >
+		<div >
 			<h2 className="text-4xl font-bold text-center"> {dayData.day} </h2>
+			
+			{isToday(dayIndex) &&
+			<p className="text-xs text-center">Heute</p>
+			}
+
 			{dayExceptionsArray.length > 0 &&
 				<ExceptionDisplay exceptionsArray={dayExceptionsArray} />
 			}
@@ -114,7 +119,8 @@ export default function TimetableDisplaySlider({ selectedDayIndex, data}: Timeta
 			>
 			{daysArray.map((dayData, index) => (
 				<swiper-slide key="index" >
-					<DayItem dayData={dayData} key={index}  />
+
+					<DayItem dayData={dayData} dayIndex={index}  />
 
 				</swiper-slide>
 			))
@@ -218,5 +224,16 @@ function createWarningText(dayString: string): string {
 		return `Morgen am ${formattedDate}`;
 	} else {
 		return `In ${dayDiff} Tagen am ${formattedDate}`;
+	}
+}
+
+function isToday(dayIndex : number): boolean {
+	const today = new Date().getDay() // Sunday - Saturday : 0 - 6
+	
+	//DaysArray in source data start with monday
+	if (dayIndex === today -1) {
+		return true;
+	} else {
+		return false;
 	}
 }

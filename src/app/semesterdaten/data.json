@@ -25,7 +25,6 @@
   "prüfungen": [],
   "links": [
             {"linkText": "Webmail", "linkUrl": "https://owa.h-ka.de/"},
-            {"linkText": "Generelle KMM-Dokumente", "linkUrl": "https://technischeredaktion.com/kmm-downloads/kmm-bachelor-downloads/"},
-            {"linkText": "Online-Service (Testbetrieb)", "linkUrl": "https://qis.hs-karlsruhe.de/"}
+            {"linkText": "Generelle KMM-Dokumente", "linkUrl": "https://technischeredaktion.com/kmm-downloads/kmm-bachelor-downloads/"}
   ]
 }
