@@ -19,6 +19,18 @@
 					"exceptions": []
 				},
 				{
+					"name": "Sprach-Management",
+					"prof": "Drewer",
+					"room": "AM 301",
+					"start": "11:30",
+					"end": "13:00",
+					"body": "Ersatz: Mo 27.5. 11:30 - 13:00 AM 301",
+					"links": [],
+					"exceptions": [
+						"2024-05-27"
+					]
+				},
+				{
 					"name": "Sprachmanagement",
 					"prof": "Gläser",
 					"room": "online",
@@ -61,16 +73,6 @@
 			"day": "Mittwoch",
 			"classEntries": [
 				{
-					"name": "Praxisnachbereitung (2. Semester Ding)",
-					"prof": "Muthig",
-					"room": "AM 111",
-					"start": "9:50",
-					"end": "13:00",
-					"body": "",
-					"links": [],
-					"exceptions": ["2024-05-15"]
-				},
-				{
 					"name": "Visuelle Komm.",
 					"prof": "Grunwald",
 					"room": "AM 301",
@@ -93,7 +95,7 @@
 					"room": "AM 301",
 					"start": "09:50",
 					"end": "13:00",
-					"body": "Nur an: <br> 16.05., 6.6., 20.6., 4.7. <br> Am 16. schon ab 8",
+					"body": "Nur an: <br> 6.6., 20.6., 4.7.",
 					"links": [
 						{
 							"linkUrl": "https://karlifi.org/",
@@ -107,7 +109,6 @@
 						
 					],
 					"exceptions": [
-						"2024-05-16",
 						"2024-06-06",
 						"2024-06-20",
 						"2024-07-04"
@@ -119,11 +120,9 @@
 					"room": "AM 126",
 					"start": "14:00",
 					"end": "15:30",
-					"body": "Ersatz: Mo 27.5. 11:30 - 13:00 AM 301",
+					"body": "",
 					"links": [],
-					"exceptions": [
-						"2024-05-27"
-					]
+					"exceptions": []
 				},
 				{
 					"name": "3D-Technologien",
@@ -152,13 +151,11 @@
 					"room": "AM 308",
 					"start": "09:50",
 					"end": "15:30",
-					"body": "Nur an: <br> 17.05., 14.06., 21.06., 28.06",
+					"body": "Nur an: <br> 14.06., 21.06.",
 					"links": [],
 					"exceptions": [
-						"2024-05-17",
 						"2024-06-14",
-						"2024-06-21",
-						"2024-06-28"
+						"2024-06-21"
 					]
 				}
 			]

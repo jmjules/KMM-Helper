@@ -26,7 +26,7 @@ export default async function SemesterData () {
         
           <h2 className="text-xl mt-2">Vorlesungsfreie Tage</h2>
           <p className="text-xs line-through"> {semester.vacationDays[0].date} ({semester.vacationDays[0].reason}) </p>
-          <p className="text-xs"> {semester.vacationDays[1].date} - {semester.vacationDays[2].date} ({semester.vacationDays[1].reason}) </p>
+          <p className="text-xs line-through"> {semester.vacationDays[1].date} - {semester.vacationDays[2].date} ({semester.vacationDays[1].reason}) </p>
           <p className="text-xs"> {semester.vacationDays[3].date} ({semester.vacationDays[3].reason}) </p>
         </div>
 
