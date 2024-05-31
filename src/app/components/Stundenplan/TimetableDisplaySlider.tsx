@@ -136,6 +136,23 @@ function ExceptionDisplay( {exceptionsArray} ) {
 	if (exceptionsArray[0] === undefined) {
 		return;
 	}
+
+	const MAX_DAYS_BEFORE_HIDING = 15
+
+	let hideExceptionsBox = true
+	for(const lectureIdx in exceptionsArray){		
+		const lectureExeptions = exceptionsArray[lectureIdx][1]	
+		for (const exceptionDateIdx in lectureExeptions){			
+			if(compareToToday(lectureExeptions[exceptionDateIdx]) >= 0 && compareToToday(lectureExeptions[exceptionDateIdx]) < MAX_DAYS_BEFORE_HIDING) {				
+				hideExceptionsBox = false
+			}
+		}
+	}
+	if (hideExceptionsBox) {
+		return;
+	}
+
+
 	return (
 	<div className="bg-yellow-800 rounded-lg border-2 border-yellow-600  m-4 p-2 flex gap-4">
 		<div className="self-start py-1 text-yellow-500">
@@ -161,7 +178,7 @@ function ExceptionDisplay( {exceptionsArray} ) {
 					<ul>
 						{arr[1].map((dateString, index) => (
 							<Fragment key={index}>
-								{compareToToday(dateString) >= 0 && compareToToday(dateString) < 15 && (
+								{compareToToday(dateString) >= 0 && compareToToday(dateString) < MAX_DAYS_BEFORE_HIDING && (
 										<li className="list-inside list-disc">
 											{" "}
 											{createWarningText(
