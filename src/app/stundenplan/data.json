@@ -19,18 +19,6 @@
 					"exceptions": []
 				},
 				{
-					"name": "Sprach-Management",
-					"prof": "Drewer",
-					"room": "AM 301",
-					"start": "11:30",
-					"end": "13:00",
-					"body": "Ersatz: Mo 27.5. 11:30 - 13:00 AM 301",
-					"links": [],
-					"exceptions": [
-						"2024-05-27"
-					]
-				},
-				{
 					"name": "Sprachmanagement",
 					"prof": "Gläser",
 					"room": "online",
