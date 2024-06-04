@@ -40,7 +40,8 @@ export default function Exams() {
           <p className='text-xs'>Glaube am letzten Termin also 21.06.?</p>
 
           <p className='text-xl mt-3'>Sprachmanagement</p>
-          <p className='text-xs'>???</p>
+          <p className='text-xs'>Endpräsentation: Mo, 24.06. Uhrzeit TBD</p>
+          <p className='text-xs'>Abgabe: 17.07. 23:59 (TBC)</p>
 
           <p className='text-xl mt-3'>Info-Systeme</p>
           <p className='text-xs'>???</p>

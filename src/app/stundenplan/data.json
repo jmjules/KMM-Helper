@@ -24,7 +24,7 @@
 					"room": "online",
 					"start": "15:40",
 					"end": "17:10",
-					"body": "",
+					"body": "Fällt aus am 17.06. <br> Am 24.06. Endpräsis und von 14:15-17:30",
 					"links": [
 						{
 							"linkUrl": "https://h-ka-de.zoom-x.de/j/66763376199?pwd=V1JMUGpObHhYVWwybmxOS1BNU1FGZz09",
@@ -36,7 +36,10 @@
 						}
 
 					],
-					"exceptions": []
+					"exceptions": [
+						"2024-06-17", 
+						"2024-06-24"
+					]
 				}
 			]
 		},
@@ -83,7 +86,7 @@
 					"room": "AM 301",
 					"start": "09:50",
 					"end": "13:00",
-					"body": "Nur an: <br> 6.6., 20.6., 4.7.",
+					"body": "Nur an: <br> 6.6., 20.6., 4.7. <br> Am 06.06. online und nur bis 11:30",
 					"links": [
 						{
 							"linkUrl": "https://karlifi.org/",
@@ -92,6 +95,10 @@
 						{
 							"linkUrl": "https://ua.infoarchitect.eu/",
 							"linkText": "Moodle"
+						},
+						{
+							"linkUrl": "https://deref-web.de/mail/client/KSKFk0wEWqc/dereferrer/?redirectUrl=https%3A%2F%2Fh-ka-de.zoom-x.de%2Fj%2F93055041535%3Fpwd%3DQUkzdU1OMnVOMS94Vng1bFEyQlRBQT09",
+							"linkText": "Zoom"
 						}
 
 						
