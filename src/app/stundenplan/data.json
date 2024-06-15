@@ -86,7 +86,7 @@
 					"room": "AM 301",
 					"start": "09:50",
 					"end": "13:00",
-					"body": "Nur an: <br> 6.6., 20.6., 4.7. <br> Am 06.06. online und nur bis 11:30",
+					"body": "Nur an: <br>20.6., 4.7. <br> Am 06.06. online und nur bis 11:30",
 					"links": [
 						{
 							"linkUrl": "https://karlifi.org/",
@@ -104,7 +104,6 @@
 						
 					],
 					"exceptions": [
-						"2024-06-06",
 						"2024-06-20",
 						"2024-07-04"
 					]
@@ -115,9 +114,11 @@
 					"room": "AM 126",
 					"start": "14:00",
 					"end": "15:30",
-					"body": "",
+					"body": "20.06. fällt aus",
 					"links": [],
-					"exceptions": []
+					"exceptions": [
+						"2024-06-20"
+					]
 				},
 				{
 					"name": "3D-Technologien",
@@ -146,10 +147,9 @@
 					"room": "AM 308",
 					"start": "09:50",
 					"end": "15:30",
-					"body": "Nur an: <br> 14.06., 21.06.",
+					"body": "21.06. letztes Mal und Endpräsentationen",
 					"links": [],
 					"exceptions": [
-						"2024-06-14",
 						"2024-06-21"
 					]
 				}
