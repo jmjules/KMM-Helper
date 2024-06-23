@@ -22,9 +22,9 @@
 					"name": "Sprachmanagement",
 					"prof": "Gläser",
 					"room": "online",
-					"start": "15:40",
-					"end": "17:10",
-					"body": "Fällt aus am 17.06. <br> Am 24.06. Endpräsis und von 14:15-17:30",
+					"start": "14:15",
+					"end": "17:30",
+					"body": "Am 24.06. Endpräsis und von 14:15-17:30",
 					"links": [
 						{
 							"linkUrl": "https://h-ka-de.zoom-x.de/j/66763376199?pwd=V1JMUGpObHhYVWwybmxOS1BNU1FGZz09",
@@ -37,7 +37,6 @@
 
 					],
 					"exceptions": [
-						"2024-06-17", 
 						"2024-06-24"
 					]
 				}
@@ -86,7 +85,7 @@
 					"room": "AM 301",
 					"start": "09:50",
 					"end": "13:00",
-					"body": "Nur an: <br>20.6., 4.7. <br> Am 06.06. online und nur bis 11:30",
+					"body": "Nur an: <br> 4.7.",
 					"links": [
 						{
 							"linkUrl": "https://karlifi.org/",
@@ -104,7 +103,6 @@
 						
 					],
 					"exceptions": [
-						"2024-06-20",
 						"2024-07-04"
 					]
 				},
@@ -114,11 +112,9 @@
 					"room": "AM 126",
 					"start": "14:00",
 					"end": "15:30",
-					"body": "20.06. fällt aus",
+					"body": "",
 					"links": [],
-					"exceptions": [
-						"2024-06-20"
-					]
+					"exceptions": []
 				},
 				{
 					"name": "3D-Technologien",
@@ -134,24 +130,6 @@
 						}
 					],
 					"exceptions": []
-				}
-			]
-		},
-
-		{
-			"day": "Freitag",
-			"classEntries": [
-				{
-					"name": "Technikdidaktik",
-					"prof": "Pittschellis",
-					"room": "AM 308",
-					"start": "09:50",
-					"end": "15:30",
-					"body": "21.06. letztes Mal und Endpräsentationen",
-					"links": [],
-					"exceptions": [
-						"2024-06-21"
-					]
 				}
 			]
 		}
