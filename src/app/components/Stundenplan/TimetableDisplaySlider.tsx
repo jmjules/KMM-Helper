@@ -106,10 +106,6 @@ export default function TimetableDisplaySlider({ selectedDayIndex, data}: Timeta
 	
 	return (
 		<div className="mt-3 mx-auto px-3 max-w-[690px] relative">
-			<div className="bg-red-800 rounded-lg border-2 border-red-600  m-4 p-2">
-				<h2 className="text-2xl font-bold">Prüfungsanmeldung 17.06. -24.06.</h2>
-				<p>Anmeldung per Mail an Ziegler und Berumen siehe Mail von Berumen</p>
-			</div>
 			<swiper-container
 			 loop="true"
 			 initial-slide={selectedDayIndex}
