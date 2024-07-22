@@ -25,6 +25,7 @@
   "prüfungen": [],
   "links": [
             {"linkText": "Webmail", "linkUrl": "https://owa.h-ka.de/"},
+            {"linkText": "Studiservice", "linkUrl": "https://rz.h-ka.de/slv"},
             {"linkText": "Generelle KMM-Dokumente", "linkUrl": "https://technischeredaktion.com/kmm-downloads/kmm-bachelor-downloads/"}
   ]
 }
