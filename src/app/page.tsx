@@ -12,7 +12,7 @@ export default async function Home() {
 	return (
 		<>
 			<SubPageHeader pageTitle="Stundenplan" />
-    			<Timetable timetableData={data} />
+    			{/* <Timetable timetableData={data} /> */}
     		</>
 	);
 }
